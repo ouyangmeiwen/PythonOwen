@@ -26,3 +26,9 @@
 2025-02-05 14:12:31,822 - fast_api - INFO - 885605c25de74875a510f67040e16720 Response: 200, Time: 0.140s
 2025-02-05 14:45:23,447 - fast_api - INFO - http://127.0.0.1:7001/docs
 2025-02-05 14:45:23,468 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-02-05 14:45:41,412 - fast_api - INFO - 31abcdbb608f4a07b1f3b9f49235d836 Request: GET http://127.0.0.1:7001/docs
+2025-02-05 14:45:41,433 - fast_api - INFO - 31abcdbb608f4a07b1f3b9f49235d836 Response: 200, Time: 0.020s
+2025-02-05 14:45:41,777 - fast_api - INFO - e57396827cef4f27a7840c4fafd569d5 Request: GET http://127.0.0.1:7001/openapi.json
+2025-02-05 14:45:41,986 - fast_api - INFO - e57396827cef4f27a7840c4fafd569d5 Response: 200, Time: 0.209s
+2025-02-05 14:45:50,200 - fast_api - INFO - 5a698f6bf21c4c65993a99cdc4da1e92 Request: GET http://127.0.0.1:7001/files/list
+2025-02-05 14:45:50,206 - fast_api - INFO - 5a698f6bf21c4c65993a99cdc4da1e92 Response: 200, Time: 0.005s
