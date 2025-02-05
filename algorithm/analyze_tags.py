@@ -3,7 +3,7 @@ import random
 import time
 
 # 假设 `lib` 是加载的 C++ 库，且已包含 `AnalyzeTagsString` 函数
-lib = ctypes.CDLL('./test/algorithm/libInvengo.Library.Algorithm.so')  # 对于 Windows 使用 mylibrary.dll
+lib = ctypes.CDLL('./algorithm/libInvengo.Library.Algorithm.so')  # 对于 Windows 使用 mylibrary.dll
 
 # 声明 AnalyzeTagsString 函数原型
 lib.AnalyzeTagsString.argtypes = [ctypes.c_char_p, ctypes.c_double, ctypes.c_double]
