@@ -1,0 +1,2 @@
+2025-02-05 10:10:51,334 - fast_api - INFO - http://127.0.0.1:7001/docs
+2025-02-05 10:10:51,348 - asyncio - DEBUG - Using proactor: IocpProactor
