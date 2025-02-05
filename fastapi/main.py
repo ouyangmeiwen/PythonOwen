@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.api.item_api import router_items
 from app.api.token_api import router_token
 from app.api.libitem_api import router_libitem
+from app.api.libitem_api_asy import router_libitem_asy
 import uvicorn
 from app.middleware.rate_limit_middleware import *
 from colorama import init, Fore
@@ -47,6 +48,7 @@ app.add_middleware(LoggingMiddleware) #日志中间件
 app.include_router(router_items)  #item
 app.include_router(router_token)  #token
 app.include_router(router_libitem)  #libitem
+app.include_router(router_libitem_asy)  #libitem_asy
 app.include_router(router_file) #file
 
 

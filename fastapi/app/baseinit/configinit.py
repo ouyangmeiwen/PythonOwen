@@ -10,6 +10,9 @@ print(PORT)
 DATABASE_URL = os.getenv("DATABASE_URL", "mysql+pymysql://root:abc%40123@127.0.0.1:3306/invengodbv4")
 print(DATABASE_URL)
 
+DATABASE_URL_ASY = os.getenv("DATABASE_URL_ASY", "mysql+aiomysql://root:abc%40123@127.0.0.1:3306/invengodbv4")
+print(DATABASE_URL_ASY)
+
 # 从环境变量中获取秘钥和算法配置
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
 print(SECRET_KEY)
