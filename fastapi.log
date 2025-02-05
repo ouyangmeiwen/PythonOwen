@@ -24,3 +24,5 @@
 2025-02-05 14:12:20,695 - fast_api - INFO - 374f7b5caf6d4d93be38632799338383 Response: 200, Time: 0.219s
 2025-02-05 14:12:31,680 - fast_api - INFO - 885605c25de74875a510f67040e16720 Request: GET http://127.0.0.1:7001/libitem_asy/getall?page=1&page_size=10
 2025-02-05 14:12:31,822 - fast_api - INFO - 885605c25de74875a510f67040e16720 Response: 200, Time: 0.140s
+2025-02-05 14:45:23,447 - fast_api - INFO - http://127.0.0.1:7001/docs
+2025-02-05 14:45:23,468 - asyncio - DEBUG - Using proactor: IocpProactor
