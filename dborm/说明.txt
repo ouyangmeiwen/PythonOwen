@@ -1,0 +1,28 @@
+#sqlserver 
+#还要安装odbc + sqlserver driver
+sudo apt-get install unixodbc-dev
+sudo apt-get install msodbcsql17
+    pip install sqlalchemy pyodbc  
+
+
+
+
+#oracle
+#要安装oracle 客户端参考C++项目
+#pip install cx_Oracle   #oracle
+
+
+#mysql
+        pip install mysql-connector-python  #DATABASE_URL = "mysql+mysqlconnector://root:password123@127.0.0.1:3306/testdb"
+pip install pymysql                         #DATABASE_URL = "mysql+pymysql://<username>:<password>@<host>:<port>/<database>"
+
+
+#postsql
+pip install psycopg2   #postgresql+psycopg2://<username>:<password>@<host>:<port>/<database>
+
+#sqllite3
+#自带
+
+
+#redis
+pip install redis

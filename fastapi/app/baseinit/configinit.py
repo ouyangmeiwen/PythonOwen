@@ -1,0 +1,25 @@
+import os
+from dotenv import load_dotenv
+load_dotenv()  # 加载 .env 文件中的环境变量
+HOST = os.getenv("HOST", "0.0.0.0")    # Default to 127.0.0.1 if not set
+print(HOST)
+
+PORT = int(os.getenv("PORT", 8001))    # Default to 8001 if not set
+print(PORT)
+
+DATABASE_URL = os.getenv("DATABASE_URL", "mysql+pymysql://root:abc%40123@127.0.0.1:3306/invengodbv4")
+print(DATABASE_URL)
+
+# 从环境变量中获取秘钥和算法配置
+SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
+print(SECRET_KEY)
+
+ALGORITHM = "HS256"  # 使用 HMAC SHA-256 算法
+ENABLE_AUTH = os.getenv("ENABLE_AUTH", "False").lower() == "true"
+print(ENABLE_AUTH)
+
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+print(LOG_LEVEL)
+
+EXPIRES_HOURS =int(os.getenv("EXPIRES_HOURS", 24))
+print(EXPIRES_HOURS)

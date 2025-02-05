@@ -1,0 +1,1 @@
+start cmd /k "cd /d %~dp0 && python manage.py runserver 9000"
