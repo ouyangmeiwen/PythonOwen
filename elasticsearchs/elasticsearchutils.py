@@ -22,7 +22,7 @@ class ElasticsearchClient:
     def index_document(self, index_name, doc_type, doc_id, body):
         # 插入文档
         try:
-            response = self.es.index(index=index_name, doc_type=doc_type, id=doc_id, body=body)
+            response = self.es.index(index=index_name,  id=doc_id, body=body)
             print(f"Document indexed successfully: ID = {response['_id']}")
         except (RequestError, TransportError) as e:
             print(f"Error indexing document: {e}")
@@ -49,7 +49,7 @@ class ElasticsearchClient:
     def get_document(self, index_name, doc_type, doc_id):
         # 获取文档
         try:
-            response = self.es.get(index=index_name, doc_type=doc_type, id=doc_id)
+            response = self.es.get(index=index_name,  id=doc_id)
             return response['_source']
         except NotFoundError:
             print(f"Document with ID {doc_id} not found.")
@@ -78,7 +78,7 @@ class ElasticsearchClient:
     def delete_document(self, index_name, doc_type, doc_id):
         # 删除文档
         try:
-            response = self.es.delete(index=index_name, doc_type=doc_type, id=doc_id)
+            response = self.es.delete(index=index_name,  id=doc_id)
             print(f"Document with ID {doc_id} deleted successfully.")
         except NotFoundError:
             print(f"Document with ID {doc_id} not found.")
