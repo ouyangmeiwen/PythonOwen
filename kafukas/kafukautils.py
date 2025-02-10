@@ -1,6 +1,3 @@
-#pip install kafka-python
-
-
 from kafka import KafkaProducer, KafkaConsumer
 import json
 import threading
@@ -12,9 +9,11 @@ class KafkaClient:
         self.topic = topic
         self.group_id = group_id
 
-        # 初始化 Kafka 生产者
+        # 初始化 Kafka 生产者，增加 acks 参数来启用消息确认
         self.producer = KafkaProducer(bootstrap_servers=self.brokers,
-                                      value_serializer=lambda v: json.dumps(v).encode('utf-8'))
+                                      value_serializer=lambda v: json.dumps(v).encode('utf-8'),
+                                      acks='all',  # acks='all' 表示等待所有副本确认
+                                      retries=3)   # 在发送失败时重试3次
 
         # 初始化 Kafka 消费者
         self.consumer = KafkaConsumer(self.topic,
@@ -24,9 +23,14 @@ class KafkaClient:
                                       value_deserializer=lambda x: json.loads(x.decode('utf-8')))
 
     def produce_message(self, message):
-        # 将消息发送到 Kafka
-        self.producer.send(self.topic, message)
-        print(f"Produced message: {message}")
+        # 将消息发送到 Kafka，并等待确认
+        future = self.producer.send(self.topic, message)
+        try:
+            # 等待消息发送并确认成功
+            record_metadata = future.get(timeout=10)  # 设置超时时间为10秒
+            print(f"Produced message: {message} to topic: {record_metadata.topic}, partition: {record_metadata.partition}, offset: {record_metadata.offset}")
+        except Exception as e:
+            print(f"Error producing message: {e}")
 
     def consume_messages(self):
         # 从 Kafka 消费消息
