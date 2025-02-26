@@ -59,3 +59,8 @@ serializer_result.is_valid(raise_exception=False)
 endtime=datetime.now()
 logger.info("结束方法时间:"+endtime.strftime("%Y-%m-%d %H:%M:%S"))
 return Response(serializer_result.data, status=status.HTTP_200_OK)
+
+
+
+docker build -t djaonapp:latest . -f Dockerfile
+docker run -d -p 9000:9000 --restart=always   --name djaonapp djaonapp:latest
