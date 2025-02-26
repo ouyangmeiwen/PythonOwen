@@ -32,8 +32,10 @@ RUN find /app -name "*.py" -exec rm -f {} \;
 # 安装 Gunicorn
 RUN pip3 install gunicorn
 
-# 暴露 Django 默认端口
+# 暴露 FastAPI 默认端口
 EXPOSE 9000
 
-# 使用 Gunicorn 启动 Django 应用
-CMD ["gunicorn", "djapi.wsgi:application", "--bind", "0.0.0.0:9000", "--workers", "4"]
+# 使用 Gunicorn 启动 FastAPI 应用
+# CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:9000"]
+CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:9000", "--workers", "4"]
+
