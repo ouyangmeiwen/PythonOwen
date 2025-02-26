@@ -1,0 +1,8 @@
+2025-02-26 13:30:22,723 - fast_api - INFO - http://127.0.0.1:7001/docs
+2025-02-26 13:30:22,724 - asyncio - DEBUG - Using selector: EpollSelector
+2025-02-26 13:30:25,704 - fast_api - INFO - 0252ebe10dea45feaa5fab105d1532cf Request: GET http://127.0.0.1:7001/docs
+2025-02-26 13:30:25,705 - fast_api - INFO - 0252ebe10dea45feaa5fab105d1532cf Response: 200, Time: 0.001s
+2025-02-26 13:30:25,954 - fast_api - INFO - 50dc60d422ee4e2db88fec485d4cc452 Request: GET http://127.0.0.1:7001/openapi.json
+2025-02-26 13:30:25,986 - fastapi - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-02-26 13:30:25,999 - fast_api - INFO - 50dc60d422ee4e2db88fec485d4cc452 Response: 200, Time: 0.045s
