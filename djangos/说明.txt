@@ -63,4 +63,21 @@ return Response(serializer_result.data, status=status.HTTP_200_OK)
 
 
 docker build -t djaonapp:latest . -f Dockerfile
-docker run -d -p 9000:9000 --restart=always   --name djaonapp djaonapp:latest
+docker run -d -p 9001:9001 --restart=always   --name djaonapp djaonapp:latest
+
+
+
+curl -X 'POST' \
+  'http://192.168.229.130:9001/api/gpi/Libitem/GetItemList/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H 'X-CSRFToken: MYQoDObON6wWwF8imXI0kWQqNSAtTGD4BMxZjsjyR1Nmy5rf8QZrVloSDZMoADQb' \
+  -d '{
+  "SkipCount": 0,
+  "MaxResultCount": 100,
+  "Barcode": "",
+  "Title": "",
+  "CallNo": "",
+  "ISBN": "",
+  "TenantId": 0
+}'

@@ -11,8 +11,11 @@ class LibitemServiceAsy:
     def __init__(self):
         self.DB = DB_INSTANCE_ASY
         # Assuming create_tables can be asynchronous
-        self.DB.create_tables([LibItem])
 
+    async def initialize(self):
+        # Assuming create_tables can be asynchronous
+        await self.DB.create_tables([LibItem])
+        
     async def model_to_dto(self, db_model: LibItem) -> LibitemDto:
         dto = LibitemDto(Id=db_model.Id)
         dto.CreationTime = db_model.CreationTime

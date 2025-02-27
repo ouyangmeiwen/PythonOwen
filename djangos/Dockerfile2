@@ -22,7 +22,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 暴露 Django 默认端口
-EXPOSE 9000
+EXPOSE 9001
 
 # 启动 Django 开发服务器
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:9000"]
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:9001"]

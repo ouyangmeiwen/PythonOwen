@@ -14,7 +14,6 @@ router_libitem_asy = APIRouter()
 
 libitemservice = LibitemServiceAsy()
 
-
 # GET 请求示例 /libitem_asy/list?id=1111
 @router_libitem_asy.get("/libitem_asy", tags=["libitem_asy"])
 async def query(request: Request,

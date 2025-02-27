@@ -15,3 +15,16 @@ pyinstaller --onefile --name fastapp --hidden-import=aiomysql main.py
 chmod +x dist/fastapp
 
 ./dist/fastapp
+
+
+
+
+
+docker build -t fastapp:latest . -f Dockerfile
+docker run -d -p 9002:9002 --restart=always   --name fastapp fastapp:latest
+
+http://192.168.229.130:9002/docs
+
+
+http://192.168.229.130:9002/libitem/getall?page=1&page_size=10
+

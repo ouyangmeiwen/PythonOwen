@@ -18,9 +18,9 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     if len(sys.argv)<=1:
-        sys.argv=['manage.py', 'runserver', '9000']
+        sys.argv=['manage.py', 'runserver', '9001']
     execute_from_command_line(sys.argv)
-    print("http://127.0.0.1:9000/api/swagger/")  #如果无法打开请注意将VSCode目录调整为当前程序的根目录
+    print("http://127.0.0.1:9001/api/swagger/")  #如果无法打开请注意将VSCode目录调整为当前程序的根目录
 
 if __name__ == '__main__':
     main()

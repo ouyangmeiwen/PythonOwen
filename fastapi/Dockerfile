@@ -23,19 +23,15 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # 复制应用程序代码
 COPY . .
 
-# 编译 Python 代码为 .pyc 文件
-RUN python3 -m compileall /app
-
-# 删除源代码，只保留编译后的 .pyc 文件
-RUN find /app -name "*.py" -exec rm -f {} \;
-
 # 安装 Gunicorn
 RUN pip3 install gunicorn
 
 # 暴露 FastAPI 默认端口
-EXPOSE 9000
+EXPOSE 9002
 
 # 使用 Gunicorn 启动 FastAPI 应用
-# CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:9000"]
-CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:9000", "--workers", "4"]
+# CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:9002"]
+# CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:9002", "--workers", "4"]
+CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "main:app", "--bind", "0.0.0.0:9002"]
+
 

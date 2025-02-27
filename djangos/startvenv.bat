@@ -6,4 +6,4 @@ REM 切换到批处理文件所在目录
 cd /d %~dp0
 
 REM 
-#python manage.py runserver 9000
+#python manage.py runserver 9001

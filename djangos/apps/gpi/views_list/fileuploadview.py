@@ -1,20 +1,16 @@
 # views.py
 from django.http import JsonResponse
-from fastapi import openapi
-from fastapi.responses import FileResponse
 from ..model_list.libitem import (Libitem)
 from ..serializers_list.uploadedfileserializer import UploadedFileSerializer,DownloadFileSerializer  # 假设我们使用 DRF 序列化器
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny
 from django.http import JsonResponse
-from rest_framework.views import APIView
 from rest_framework.parsers import MultiPartParser, FormParser
 import os
 from django.conf import settings
 from rest_framework.decorators import action
 from drf_yasg.utils import swagger_auto_schema
-import mimetypes
 from urllib.parse import quote
 from django.http import StreamingHttpResponse
 
