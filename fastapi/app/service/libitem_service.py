@@ -12,6 +12,9 @@ class LibitemService:
         self.DB=DB_INSTANCE
         self.DB.create_tables([LibItem])
 
+    def initialize(self):
+        self.DB.create_tables([LibItem])
+        
     #增加sessin销毁  单例是不需要销毁的
     # def __del__(self):
     #     self.DB.close()
