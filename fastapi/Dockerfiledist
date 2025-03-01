@@ -1,0 +1,18 @@
+# 使用 Python 官方基础镜像
+FROM swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/python:3.9-slim
+
+# 设置工作目录
+WORKDIR /app
+
+# 将打包的可执行文件复制到镜像中
+COPY dist/fastapp /app/fastapp
+
+COPY .env /app/.env
+
+# 给文件赋予执行权限
+RUN chmod +x /app/fastapp
+
+# 确保容器启动时运行已打包的程序
+CMD ["/app/fastapp"]
+
+

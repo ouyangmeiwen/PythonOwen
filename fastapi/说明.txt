@@ -24,6 +24,14 @@ docker build -t fastapp:latest . -f Dockerfile
 docker run -d -p 9002:9002 --restart=always   --name fastapp fastapp:latest
 docker run -d -p 9002:9002   --name fastapp fastapp:latest
 
+
+
+
+docker build -t fastapp:1.0 . -f Dockerfiledist
+docker run -d -p 9002:9002 --restart=always   --name fastapp1.0 fastapp:1.0
+docker run -d -p 9002:9002   --name fastapp1.0 fastapp:1.0
+
+
 http://192.168.229.130:9002/docs
 
 
