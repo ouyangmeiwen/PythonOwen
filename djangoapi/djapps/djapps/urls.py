@@ -16,11 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from rest_framework_simplejwt.views import (TokenObtainPairView,
-                                            TokenRefreshView)
+# from rest_framework_simplejwt.views import (TokenObtainPairView,
+#                                             TokenRefreshView)
+
+from .token import CusTokenObtainPairView, CusTokenRefreshView
 urlpatterns = [
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),  #Response 不能用
+    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/token/', CusTokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', CusTokenRefreshView.as_view(), name='token_refresh'),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),  # 让 /api/ 作为前缀
 ]
