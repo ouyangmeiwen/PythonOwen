@@ -1,0 +1,32 @@
+django-admin startproject djapps
+cd djapps
+
+python manage.py startapp api
+
+打包
+pyinstaller --onefile --name djapps manage.py
+
+./djapps runserver 0.0.0.0:9001 --noreload
+
+#windows djapps.exe runserver 0.0.0.0:9001
+
+gunicorn djapps.wsgi:application --bind 0.0.0.0:9001 --workers 4
+
+
+
+curl http://192.168.229.130:9001/api/hello?name=Owen
+http://192.168.229.130:9001/api/hello?name=Owen
+
+
+
+
+docker build -t djapps:latest . -f Dockerfile
+docker run -d -p 9001:9001 --restart=always   --name djapps djapps:latest
+docker run -d -p 9001:9001    --name djapps djapps:latest
+
+
+
+
+docker build -t djapps:1.0 . -f Dockerfiledist
+docker run -d -p 9001:9001 --restart=always   --name djapps1.0 djapps:1.0
+docker run -d -p 9001:9001   --name djapps1.0 djapps:1.0
