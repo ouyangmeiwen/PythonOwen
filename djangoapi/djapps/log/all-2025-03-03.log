@@ -1240,3 +1240,94 @@ AttributeError: module 'datetime' has no attribute 'now'
 [2025-03-03 14:54:40,235] [libitemviewset.py:263] [libitemviewset:GetItemList] [INFO]- 进入方法时间:2025-03-03 14:54:40
 [2025-03-03 14:54:40,962] [libitemviewset.py:318] [libitemviewset:GetItemList] [INFO]- 结束方法时间:2025-03-03 14:54:40
 [2025-03-03 14:54:40,969] [basehttp.py:212] [basehttp:log_message] [INFO]- "POST /api/libitems/GetItemList/ HTTP/1.1" 200 88345
+[2025-03-03 15:05:19,538] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-03 15:05:25,433] [log.py:241] [log:log_response] [WARNING]- Method Not Allowed: /api/libitems/GetItemList/
+[2025-03-03 15:05:25,436] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitems/GetItemList/ HTTP/1.1" 405 9752
+[2025-03-03 15:05:28,044] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/libitems HTTP/1.1" 301 0
+[2025-03-03 15:05:28,297] [log.py:241] [log:log_response] [ERROR]- Internal Server Error: /api/libitems/
+Traceback (most recent call last):
+  File "/home/owen/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/owen/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/owen/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/owen/Github/PythonOwen/djangoapi/djapps/api/views_list/libitemviewset.py", line 116, in list
+    return JsonResponse(status=405)  # 禁用 GET 列表方法
+TypeError: JsonResponse.__init__() missing 1 required positional argument: 'data'
+[2025-03-03 15:05:28,301] [basehttp.py:212] [basehttp:log_message] [ERROR]- "GET /api/libitems/ HTTP/1.1" 500 97825
+[2025-03-03 15:05:50,841] [log.py:241] [log:log_response] [WARNING]- Method Not Allowed: /api/libitems/GetItemList/
+[2025-03-03 15:05:50,843] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitems/GetItemList/ HTTP/1.1" 405 9752
+[2025-03-03 15:06:02,569] [log.py:241] [log:log_response] [ERROR]- Internal Server Error: /api/libitems/
+Traceback (most recent call last):
+  File "/home/owen/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/owen/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/owen/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/owen/Github/PythonOwen/djangoapi/djapps/api/views_list/libitemviewset.py", line 116, in list
+    return JsonResponse(status=405)  # 禁用 GET 列表方法
+TypeError: JsonResponse.__init__() missing 1 required positional argument: 'data'
+[2025-03-03 15:06:02,574] [basehttp.py:212] [basehttp:log_message] [ERROR]- "GET /api/libitems/ HTTP/1.1" 500 98137
+[2025-03-03 15:06:13,149] [log.py:241] [log:log_response] [ERROR]- Internal Server Error: /api/libitems/search-bby-name/
+Traceback (most recent call last):
+  File "/home/owen/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/owen/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/owen/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/owen/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/owen/Github/PythonOwen/djangoapi/djapps/api/views_list/libitemviewset.py", line 118, in retrieve
+    return JsonResponse(status=405)  # 禁用 GET 获取单个资源方法
+TypeError: JsonResponse.__init__() missing 1 required positional argument: 'data'
+[2025-03-03 15:06:13,151] [basehttp.py:212] [basehttp:log_message] [ERROR]- "GET /api/libitems/search-bby-name/?name=%E9%95%BF%E7%9C%A0%E4%B8%8D%E9%86%92 HTTP/1.1" 500 99573
+[2025-03-03 15:06:26,283] [log.py:241] [log:log_response] [WARNING]- Unauthorized: /api/libitem
+[2025-03-03 15:06:26,287] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitem?page=1&size=10 HTTP/1.1" 401 4832
+[2025-03-03 15:06:28,989] [log.py:241] [log:log_response] [WARNING]- Unauthorized: /api/libitem
+[2025-03-03 15:06:28,990] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitem?page=1&size=10 HTTP/1.1" 401 4832
+[2025-03-03 15:06:31,109] [log.py:241] [log:log_response] [WARNING]- Unauthorized: /api/libitem
+[2025-03-03 15:06:31,111] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitem?page=1&size=10 HTTP/1.1" 401 4832
+[2025-03-03 15:06:34,494] [log.py:241] [log:log_response] [WARNING]- Unauthorized: /api/libitem
+[2025-03-03 15:06:34,502] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitem HTTP/1.1" 401 4771
+[2025-03-03 15:06:37,716] [log.py:241] [log:log_response] [WARNING]- Unauthorized: /api/libitem
+[2025-03-03 15:06:37,717] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitem HTTP/1.1" 401 4771
+[2025-03-03 15:06:45,213] [log.py:241] [log:log_response] [WARNING]- Unauthorized: /api/libitem
+[2025-03-03 15:06:45,214] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitem?name=Owen HTTP/1.1" 401 4805
+[2025-03-03 15:06:57,084] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/hello?name=Owen HTTP/1.1" 200 28
+[2025-03-03 15:07:06,608] [log.py:241] [log:log_response] [WARNING]- Unauthorized: /api/libitem
+[2025-03-03 15:07:06,614] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitem?page=1&size=10 HTTP/1.1" 401 4832
+[2025-03-03 15:07:32,208] [log.py:241] [log:log_response] [WARNING]- Unauthorized: /api/libitem
+[2025-03-03 15:07:32,211] [basehttp.py:212] [basehttp:log_message] [WARNING]- "POST /api/libitem?page=1&size=10 HTTP/1.1" 401 4833
+[2025-03-03 15:08:36,823] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-03 15:08:43,211] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/libitem?page=1&size=10 HTTP/1.1" 200 8818

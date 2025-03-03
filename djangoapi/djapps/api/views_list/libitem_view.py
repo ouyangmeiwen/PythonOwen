@@ -5,11 +5,12 @@ from django.http import *
 from rest_framework.views import APIView
 from ..model_list.libitem import Libitem
 from ..utils_lst.string_helper import convert_model_to_dict
+from rest_framework.permissions import AllowAny
 
 class LibItemView(APIView):
     authentication_classes = [JWTAuthentication]  # 使用 JWT 认证
-    permission_classes = [IsAuthenticated]       # 需要认证才能访问
-
+    #permission_classes = [IsAuthenticated]       # 需要认证才能访问
+    permission_classes = [AllowAny]       # 需要认证才能访问
     # curl http://127.0.0.1:9001/api/libitem?name=Owen
     # http://127.0.0.1:9001/api/libitem?page=1&size=10
     def get(self, request):
