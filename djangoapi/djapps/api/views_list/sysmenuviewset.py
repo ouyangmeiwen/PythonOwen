@@ -87,7 +87,7 @@ class SysmenuViewSet(ModelViewSet):
         try:
             page_objs = paginator.page(page)
         except:
-            return JsonResponse({'msg': 'Page not found'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'msg': 'Page not found'}, status=status.HTTP_400_BAD_REQUEST)
         #转换获得的结果
         items=[]
         menus_list=list(page_objs)
@@ -98,7 +98,7 @@ class SysmenuViewSet(ModelViewSet):
         endtime=datetime.now()
         logger.info("结束方法时间:"+endtime.strftime("%Y-%m-%d %H:%M:%S"))
         
-        return JsonResponse(datas, status=status.HTTP_200_OK)
+        return Response(datas, status=status.HTTP_200_OK)
 
         
 

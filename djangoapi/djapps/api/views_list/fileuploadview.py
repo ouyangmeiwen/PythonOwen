@@ -5,7 +5,6 @@ from ..serializers_list.uploadedfileserializer import UploadedFileSerializer,Dow
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny
-from django.http import JsonResponse
 from rest_framework.parsers import MultiPartParser, FormParser
 import os
 from django.conf import settings

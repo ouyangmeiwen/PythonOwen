@@ -190,6 +190,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_RENDERER_CLASSES': [
         # 'utils.response.FitJSONRenderer',
+        'rest_framework.renderers.JSONRenderer',   #启用Response
         'rest_framework.renderers.BrowsableAPIRenderer'
     ],
     # 'DEFAULT_FILTER_BACKENDS': [

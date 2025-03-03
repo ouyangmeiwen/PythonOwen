@@ -5,7 +5,7 @@ from rest_framework.decorators import action
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
-from django.http import *
+from rest_framework.response import Response
 
 
 from rest_framework.permissions import AllowAny
@@ -111,17 +111,17 @@ class LibitemViewSet(ModelViewSet):
 
     # 覆盖并禁用默认的增删改查方法 如果不需要默认的增删改查 则打开注释
     def create(self, request, *args, **kwargs):
-        return JsonResponse(status=405)  # 禁用 POST 创建方法
+        return Response(status=405)  # 禁用 POST 创建方法
     def list(self, request, *args, **kwargs):
-        return JsonResponse(status=405)  # 禁用 GET 列表方法
+        return Response(status=405)  # 禁用 GET 列表方法
     def retrieve(self, request, *args, **kwargs):
-        return JsonResponse(status=405)  # 禁用 GET 获取单个资源方法
+        return Response(status=405)  # 禁用 GET 获取单个资源方法
     def update(self, request, *args, **kwargs):
-        return JsonResponse(status=405)  # 禁用 PUT 更新方法
+        return Response(status=405)  # 禁用 PUT 更新方法
     def partial_update(self, request, *args, **kwargs):
-        return JsonResponse(status=405)  # 禁用 PATCH 更新方法
+        return Response(status=405)  # 禁用 PATCH 更新方法
     def destroy(self, request, *args, **kwargs):
-        return JsonResponse(status=405)  # 禁用 DELETE 删除方法
+        return Response(status=405)  # 禁用 DELETE 删除方法
 
 
     @swagger_auto_schema(query_serializer=ImportExcelSerializer)
@@ -150,7 +150,7 @@ class LibitemViewSet(ModelViewSet):
         if os.path.exists(Path):
             logger.info("文件存在")
         else:
-            return JsonResponse({'msg':'文件不存在'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'msg':'文件不存在'}, status=status.HTTP_400_BAD_REQUEST)
         df = pd.read_excel(Path)
         total=len(df)
         logger.info("共产生数据:"+str(total)+datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
@@ -253,7 +253,7 @@ class LibitemViewSet(ModelViewSet):
         endtime=datetime.now()
         logger.info("结束方法时间:"+endtime.strftime("%Y-%m-%d %H:%M:%S"))
         logger.info("插入:"+str(total)+",消耗时间:"+str((endtime-begintime).total_seconds())+'秒')
-        return JsonResponse([], status=status.HTTP_200_OK)
+        return Response([], status=status.HTTP_200_OK)
 
 
 
@@ -302,7 +302,7 @@ class LibitemViewSet(ModelViewSet):
         try:
             page_objs = paginator.page(page_number)
         except:
-            return JsonResponse({'msg': 'Page not found'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'msg': 'Page not found'}, status=status.HTTP_400_BAD_REQUEST)
 
         #转换获得的结果
         libitems=list(page_objs)
@@ -316,4 +316,4 @@ class LibitemViewSet(ModelViewSet):
             datas.append(data)
         endtime=datetime.now()
         logger.info("结束方法时间:"+endtime.strftime("%Y-%m-%d %H:%M:%S"))
-        return JsonResponse({'TotalCount':total_count,'Items':datas}, status=status.HTTP_200_OK)
+        return Response({'TotalCount':total_count,'Items':datas}, status=status.HTTP_200_OK)
