@@ -1331,3 +1331,7 @@ TypeError: JsonResponse.__init__() missing 1 required positional argument: 'data
 [2025-03-03 15:07:32,211] [basehttp.py:212] [basehttp:log_message] [WARNING]- "POST /api/libitem?page=1&size=10 HTTP/1.1" 401 4833
 [2025-03-03 15:08:36,823] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 [2025-03-03 15:08:43,211] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/libitem?page=1&size=10 HTTP/1.1" 200 8818
+[2025-03-03 15:40:10,690] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-03 15:40:17,813] [log.py:241] [log:log_response] [WARNING]- Method Not Allowed: /api/libitems/GetItemList/
+[2025-03-03 15:40:17,819] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitems/GetItemList/ HTTP/1.1" 405 9752
+[2025-03-03 15:40:21,262] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/libitem?page=1&size=10 HTTP/1.1" 200 8818
