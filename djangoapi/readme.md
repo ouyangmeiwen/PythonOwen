@@ -16,6 +16,13 @@ python manage.py createsuperuser
 
 
 
+#请注意
+ModelViewSet
+     Response
+APIView
+     JsonResponse
+
+
 打包
 
 settings.py
