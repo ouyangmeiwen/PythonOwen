@@ -39,6 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
+    'rest_framework',
+    'rest_framework.authtoken',
+
+
     'api'
 ]
 
@@ -85,14 +91,14 @@ DATABASES = {
         'HOST': '192.168.229.130',
         'PORT': '3306',
     },
-    'invengodb': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'invengodbv41',
-        'USER': 'root',
-        'PASSWORD': 'abc@123',
-        'HOST': '192.168.229.130',
-        'PORT': '3306',
-    }
+    # 'invengodb': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'invengodbv41',
+    #     'USER': 'root',
+    #     'PASSWORD': 'abc@123',
+    #     'HOST': '192.168.229.130',
+    #     'PORT': '3306',
+    # }
     # 'default': {
     #     'ENGINE': 'django.db.backends.oracle',
     #     'NAME': 'DCLHR',  # Oracle 数据库的服务名或 SID
@@ -184,18 +190,18 @@ REST_FRAMEWORK = {
         # 'apps.system.permission.RbacPermission'
     ],
     'DEFAULT_RENDERER_CLASSES': [
-        'utils.response.FitJSONRenderer',
+        # 'utils.response.FitJSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer'
     ],
-    'DEFAULT_FILTER_BACKENDS': [
-        'django_filters.rest_framework.DjangoFilterBackend',
-        'rest_framework.filters.SearchFilter',
-        'rest_framework.filters.OrderingFilter'
-    ],
-    'DEFAULT_PAGINATION_CLASS': 'utils.pagination.MyPagination',
+    # 'DEFAULT_FILTER_BACKENDS': [
+    #     'django_filters.rest_framework.DjangoFilterBackend',
+    #     'rest_framework.filters.SearchFilter',
+    #     'rest_framework.filters.OrderingFilter'
+    # ],
+    # 'DEFAULT_PAGINATION_CLASS': 'utils.pagination.MyPagination',
     'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S',
     'DATE_FORMAT': '%Y-%m-%d',
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     'UNAUTHENTICATED_USER': None,
     'UNAUTHENTICATED_TOKEN': None,
 }

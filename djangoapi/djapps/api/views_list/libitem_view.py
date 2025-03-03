@@ -1,39 +1,40 @@
-from django.http import *
-import json
 from django.core.paginator import Paginator
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from django.http import *
+from rest_framework.views import APIView
+from ..model_list.libitem import Libitem
+from ..utils_lst.string_helper import convert_model_to_dict
 
-from ..model_list.libitem import (Libitem)
-from ..utils_lst.string_helper import *
-# curl http://127.0.0.1:9001/api/libitem?name=Owen
-# http://127.0.0.1:9001/api/libitem?name=Owen
-def libitem(request):
-    libitemallquery=Libitem.objects.all()
-    libitemallquery=libitemallquery.order_by('-creationtime','barcode')
-    page_number = 1
-    page_size = 10
-    # 创建分页器
-    paginator = Paginator(libitemallquery, page_size)
-    total_count = paginator.count 
-    # 获取当前页的数据
-    try:
-        page_objs = paginator.page(page_number)
-    except:
-        return JsonResponse({'msg': 'Page not found'})
+class LibItemView(APIView):
+    authentication_classes = [JWTAuthentication]  # 使用 JWT 认证
+    permission_classes = [IsAuthenticated]       # 需要认证才能访问
 
-    #转换获得的结果
-    libitems=list(page_objs)
-    #构建返回的结果
-    datas=[]
-    #循环递归处理
-    for item in libitems:
-        #转换数据库对象
-        data=convert_model_to_dict(item)
-        datas.append(data)
-     # 返回JSON格式的响应
-    response_data = {
-        'total_count': total_count,  # 返回总记录数
-        'page_number': page_number,  # 返回当前页
-        'page_size': page_size,      # 返回每页数据量
-        'datas': datas               # 返回数据内容
-    }
-    return JsonResponse(response_data)  # 404 Not Found
+    # curl http://127.0.0.1:9001/api/libitem?name=Owen
+    # http://127.0.0.1:9001/api/libitem?page=1&size=10
+    def get(self, request):
+        libitemallquery = Libitem.objects.all().order_by('-creationtime', 'barcode')
+
+        # 获取分页参数
+        page_number = request.GET.get('page', 1)
+        page_size = request.GET.get('size', 10)
+
+        paginator = Paginator(libitemallquery, page_size)
+        total_count = paginator.count 
+
+        try:
+            page_objs = paginator.page(page_number)
+        except:
+            return JsonResponse({'msg': 'Page not found'}, status=404)
+
+        # 转换数据库对象
+        datas = [convert_model_to_dict(item) for item in page_objs]
+
+        # 构建返回的 JSON 结果
+        response_data = {
+            'total_count': total_count,  # 总记录数
+            'page_number': int(page_number),  # 当前页码
+            'page_size': int(page_size),  # 每页大小
+            'datas': datas  # 数据内容
+        }
+        return JsonResponse(response_data)
