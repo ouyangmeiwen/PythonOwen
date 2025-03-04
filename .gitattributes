@@ -1,6 +1,6 @@
 # 强制 GitHub 识别 Python 文件
 *.py linguist-language=Python
 
-# 如果有 HTML 或 TeX 文件，明确标记它们
-*.html linguist-language=HTML
-*.tex linguist-language=TeX
+# 标记 HTML 和 TeX 文件为文档或生成文件
+*.html linguist-documentation
+*.tex linguist-documentation
