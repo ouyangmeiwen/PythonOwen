@@ -1,1 +1,2 @@
 *.tex linguist-documentation
+*.py linguist-language=Python
