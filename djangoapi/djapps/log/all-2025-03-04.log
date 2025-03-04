@@ -235,3 +235,15 @@
 [2025-03-04 08:36:47,084] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 179
 [2025-03-04 08:36:56,917] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
 [2025-03-04 08:36:56,920] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:50:57,578] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:51:06,035] [autoreload.py:266] [autoreload:trigger_reload] [INFO]- /home/owen/Github/PythonOwen/djangoapi/djapps/manage.py changed, reloading.
+[2025-03-04 08:51:16,291] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:51:20,226] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2168
+[2025-03-04 08:51:20,514] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002
+[2025-03-04 08:51:21,753] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /admin/login/?next=/api/swagger/ HTTP/1.1" 200 4207
+[2025-03-04 08:51:26,324] [basehttp.py:212] [basehttp:log_message] [INFO]- "POST /admin/login/?next=/api/swagger/ HTTP/1.1" 302 0
+[2025-03-04 08:51:26,412] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2396
+[2025-03-04 08:51:26,678] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002
+[2025-03-04 08:51:30,637] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /admin/logout/?next=/api/swagger/ HTTP/1.1" 302 0
+[2025-03-04 08:51:30,653] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2168
+[2025-03-04 08:51:30,829] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002

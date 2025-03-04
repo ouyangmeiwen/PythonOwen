@@ -239,8 +239,9 @@ CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
 # swagger配置
 SWAGGER_SETTINGS = {
-   'LOGIN_URL':'/django/admin/login/',
-   'LOGOUT_URL':'/django/admin/logout/'
+   'LOGIN_URL':'/admin/login/',
+   'LOGOUT_URL':'/admin/logout/',
+   'USE_SESSION_AUTH': True,  # 允许 Swagger 使用 Django 认证
 }
 
 # 日志配置
