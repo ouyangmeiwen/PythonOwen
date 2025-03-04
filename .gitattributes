@@ -1,2 +1,1 @@
-*.html linguist-language=HTML
-*.py linguist-language=Python
+*.tex linguist-documentation
