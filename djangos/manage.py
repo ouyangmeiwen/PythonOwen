@@ -4,7 +4,7 @@ import os
 import sys
 
 # # 确保当前工作目录是脚本所在目录  保证可以从上级启动
-# os.chdir(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     """Run administrative tasks."""

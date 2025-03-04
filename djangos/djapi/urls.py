@@ -33,7 +33,7 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Django-Vue-Admin API",
       default_version='v1',
-      contact=openapi.Contact(email="caoqianming@foxmail.com"),
+      contact=openapi.Contact(email="admin@foxmail.com"),
       license=openapi.License(name="MIT License"),
    ),
    public=True,

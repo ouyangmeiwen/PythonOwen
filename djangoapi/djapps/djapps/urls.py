@@ -20,11 +20,43 @@ from rest_framework_simplejwt.views import (TokenObtainPairView,
                                             TokenRefreshView)
 
 from .token import CusTokenObtainPairView, CusTokenRefreshView
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework.permissions import AllowAny
+from django.urls import  re_path
+from django.conf.urls.static import static
+
+
+
+schema_view = get_schema_view(
+   openapi.Info(
+      title="Django-Vue-Admin API",
+      default_version='v1',
+      contact=openapi.Contact(email="admin@foxmail.com"),
+      license=openapi.License(name="MIT License"),
+   ),
+   public=True,
+   permission_classes=[],
+)
+
+
+
+
+
+
+
 urlpatterns = [
+
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),  #Response 不能用
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     # path('api/token/', CusTokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('api/token/refresh/', CusTokenRefreshView.as_view(), name='token_refresh'),
+    path('django/admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),  # 让 /api/ 作为前缀
+
+
+    # api文档
+    path('api/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

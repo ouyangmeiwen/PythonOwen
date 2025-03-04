@@ -47,3 +47,191 @@
 [2025-03-04 00:57:16,889] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitem/?name=Owen HTTP/1.1" 404 179
 [2025-03-04 00:57:22,757] [log.py:241] [log:log_response] [WARNING]- Method Not Allowed: /api/token/refresh/
 [2025-03-04 00:57:22,758] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/token/refresh/ HTTP/1.1" 405 7549
+[2025-03-04 08:17:15,386] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:17:39,211] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:17:54,519] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2161
+[2025-03-04 08:17:54,574] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-03-04 08:17:54,575] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-03-04 08:17:54,584] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-03-04 08:17:54,587] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-03-04 08:17:54,640] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-03-04 08:17:54,649] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-03-04 08:17:54,684] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-03-04 08:17:54,693] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-03-04 08:17:54,694] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-03-04 08:17:54,695] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-03-04 08:17:54,702] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-03-04 08:17:54,705] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-03-04 08:17:54,710] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-03-04 08:17:54,712] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-03-04 08:17:56,408] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:17:56,409] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:17:56,459] [log.py:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+[2025-03-04 08:17:56,460] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 179
+[2025-03-04 08:18:10,908] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:18:10,909] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:19:14,246] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:19:22,523] [autoreload.py:266] [autoreload:trigger_reload] [INFO]- /home/owen/Github/PythonOwen/djangoapi/djapps/djapps/urls.py changed, reloading.
+[2025-03-04 08:19:24,869] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:19:54,410] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:20:02,539] [autoreload.py:266] [autoreload:trigger_reload] [INFO]- /home/owen/Github/PythonOwen/djangoapi/djapps/djapps/urls.py changed, reloading.
+[2025-03-04 08:20:04,999] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:20:33,071] [autoreload.py:266] [autoreload:trigger_reload] [INFO]- /home/owen/Github/PythonOwen/djangoapi/djapps/djapps/urls.py changed, reloading.
+[2025-03-04 08:20:39,733] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:20:57,455] [autoreload.py:266] [autoreload:trigger_reload] [INFO]- /home/owen/Github/PythonOwen/djangoapi/djapps/djapps/urls.py changed, reloading.
+[2025-03-04 08:21:03,988] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:21:16,163] [autoreload.py:266] [autoreload:trigger_reload] [INFO]- /home/owen/Github/PythonOwen/djangoapi/djapps/djapps/urls.py changed, reloading.
+[2025-03-04 08:21:18,480] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:21:25,348] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2161
+[2025-03-04 08:21:25,449] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-03-04 08:21:25,450] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-03-04 08:21:25,453] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-03-04 08:21:25,454] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-03-04 08:21:25,461] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-03-04 08:21:25,463] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-03-04 08:21:25,517] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-03-04 08:21:25,519] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-03-04 08:21:25,524] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-03-04 08:21:25,526] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-03-04 08:21:25,533] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-03-04 08:21:25,538] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-03-04 08:21:25,538] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-03-04 08:21:25,540] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-03-04 08:21:27,462] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:21:27,466] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:23:33,809] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:23:38,258] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:23:38,553] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002
+[2025-03-04 08:24:02,924] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:24:06,637] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:24:06,877] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002
+[2025-03-04 08:24:40,696] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:24:43,957] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:24:44,012] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-03-04 08:24:44,013] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-03-04 08:24:44,018] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-03-04 08:24:44,021] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-03-04 08:24:44,040] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-03-04 08:24:44,041] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-03-04 08:24:44,053] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-03-04 08:24:44,052] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-03-04 08:24:44,057] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-03-04 08:24:44,058] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-03-04 08:24:44,063] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-03-04 08:24:44,075] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-03-04 08:24:44,076] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-03-04 08:24:44,076] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-03-04 08:24:44,118] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-03-04 08:24:44,120] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 179
+[2025-03-04 08:24:45,700] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:24:45,703] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:24:45,742] [log.py:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+[2025-03-04 08:24:45,743] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 179
+[2025-03-04 08:25:13,644] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:25:18,920] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:25:19,001] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-03-04 08:25:19,003] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-03-04 08:25:19,005] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-03-04 08:25:19,006] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-03-04 08:25:19,019] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-03-04 08:25:19,021] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-03-04 08:25:19,025] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-03-04 08:25:19,027] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-03-04 08:25:19,035] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-03-04 08:25:19,036] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-03-04 08:25:19,074] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-03-04 08:25:19,077] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-03-04 08:25:19,078] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-03-04 08:25:19,081] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-03-04 08:25:19,147] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-03-04 08:25:19,149] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 179
+[2025-03-04 08:25:22,494] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:25:22,496] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:25:22,541] [log.py:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+[2025-03-04 08:25:22,543] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 179
+[2025-03-04 08:25:28,646] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-03-04 08:25:28,651] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-03-04 08:25:28,649] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-03-04 08:25:28,653] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-03-04 08:25:29,763] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:25:29,764] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:26:15,573] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:26:19,217] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:26:19,286] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-03-04 08:26:19,288] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-03-04 08:26:19,290] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-03-04 08:26:19,292] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-03-04 08:26:19,304] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-03-04 08:26:19,306] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-03-04 08:26:19,313] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-03-04 08:26:19,316] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-03-04 08:26:19,321] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-03-04 08:26:19,323] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-03-04 08:26:19,328] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-03-04 08:26:19,331] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-03-04 08:26:19,336] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-03-04 08:26:19,338] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-03-04 08:26:19,397] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-03-04 08:26:19,399] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 179
+[2025-03-04 08:26:52,620] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:26:52,690] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-03-04 08:26:52,691] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-03-04 08:26:52,695] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-03-04 08:26:52,696] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-03-04 08:26:52,712] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-03-04 08:26:52,720] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-03-04 08:26:52,721] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-03-04 08:26:52,722] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-03-04 08:26:52,728] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-03-04 08:26:52,731] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-03-04 08:26:52,737] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-03-04 08:26:52,738] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-03-04 08:26:52,743] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-03-04 08:26:52,744] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-03-04 08:26:54,228] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:26:54,229] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:26:54,263] [log.py:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+[2025-03-04 08:26:54,264] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 179
+[2025-03-04 08:27:24,049] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:27:28,524] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:27:28,811] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002
+[2025-03-04 08:27:45,859] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/libitem HTTP/1.1" 200 8818
+[2025-03-04 08:29:18,337] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:29:23,372] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:29:23,460] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-03-04 08:29:23,463] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-03-04 08:29:23,465] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-03-04 08:29:23,469] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-03-04 08:29:23,478] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-03-04 08:29:23,481] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-03-04 08:29:23,492] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-03-04 08:29:23,497] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-03-04 08:29:23,502] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-03-04 08:29:23,504] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-03-04 08:29:23,514] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-03-04 08:29:23,515] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-03-04 08:29:23,519] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-03-04 08:29:23,521] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-03-04 08:29:23,554] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-03-04 08:29:23,555] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 179
+[2025-03-04 08:29:25,568] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:29:25,569] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:29:25,602] [log.py:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+[2025-03-04 08:29:25,603] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 179
+[2025-03-04 08:30:08,358] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:30:24,589] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:30:24,745] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-03-04 08:30:24,747] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 179
+[2025-03-04 08:30:24,844] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002
+[2025-03-04 08:30:55,236] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/libitem HTTP/1.1" 200 8818
+[2025-03-04 08:36:39,068] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:36:44,371] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:36:44,630] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-03-04 08:36:44,658] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 179
+[2025-03-04 08:36:44,758] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002
+[2025-03-04 08:36:47,037] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:36:47,039] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
+[2025-03-04 08:36:47,076] [log.py:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+[2025-03-04 08:36:47,084] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 179
+[2025-03-04 08:36:56,917] [log.py:241] [log:log_response] [WARNING]- Not Found: /django/admin/login/
+[2025-03-04 08:36:56,920] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 404 179
