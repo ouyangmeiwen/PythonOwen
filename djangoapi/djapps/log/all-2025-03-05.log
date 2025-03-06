@@ -1,0 +1,10 @@
+[2025-03-05 22:18:47,299] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-05 22:19:10,358] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2168
+[2025-03-05 22:19:10,568] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-03-05 22:19:10,609] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 179
+[2025-03-05 22:19:10,632] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002
+[2025-03-05 22:20:28,473] [log.py:241] [log:log_response] [WARNING]- Method Not Allowed: /api/libitems/
+[2025-03-05 22:20:28,475] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /api/libitems/ HTTP/1.1" 405 0
+[2025-03-05 22:21:02,341] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /admin/login/?next=/api/swagger/ HTTP/1.1" 200 4207
+[2025-03-05 22:21:02,433] [log.py:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+[2025-03-05 22:21:02,435] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 179

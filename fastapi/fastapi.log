@@ -1,0 +1,4 @@
+2025-03-06 05:32:34,744 - asyncio - DEBUG - Using selector: EpollSelector
+2025-03-06 05:32:34,907 - asyncio - DEBUG - Using selector: EpollSelector
+2025-03-06 05:32:34,952 - asyncio - DEBUG - Using selector: EpollSelector
+2025-03-06 05:32:34,973 - asyncio - DEBUG - Using selector: EpollSelector
