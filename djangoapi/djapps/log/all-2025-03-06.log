@@ -1,1 +1,23 @@
 [2025-03-06 13:27:55,988] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-03-06 13:54:07,106] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-06 13:54:22,977] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2168
+[2025-03-06 13:54:23,252] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-03-06 13:54:23,270] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 179
+[2025-03-06 13:54:23,283] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 18002
+[2025-03-06 13:54:32,753] [sysmenuviewset.py:61] [sysmenuviewset:QueryMenus] [INFO]- 进入方法时间:2025-03-06 13:54:32
+[2025-03-06 13:54:32,888] [sysmenuviewset.py:99] [sysmenuviewset:QueryMenus] [INFO]- 结束方法时间:2025-03-06 13:54:32
+[2025-03-06 13:54:32,890] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/sysmenu/QueryMenus/ HTTP/1.1" 200 31651
+[2025-03-06 13:55:48,236] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-06 13:56:00,175] [sysmenuviewset.py:61] [sysmenuviewset:QueryMenus] [INFO]- 进入方法时间:2025-03-06 13:56:00
+[2025-03-06 13:56:00,302] [sysmenuviewset.py:99] [sysmenuviewset:QueryMenus] [INFO]- 结束方法时间:2025-03-06 13:56:00
+[2025-03-06 13:56:00,307] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/sysmenu/QueryMenus/ HTTP/1.1" 200 31651
+[2025-03-06 13:56:04,748] [sysmenuviewset.py:61] [sysmenuviewset:QueryMenus] [INFO]- 进入方法时间:2025-03-06 13:56:04
+[2025-03-06 13:56:04,855] [sysmenuviewset.py:99] [sysmenuviewset:QueryMenus] [INFO]- 结束方法时间:2025-03-06 13:56:04
+[2025-03-06 13:56:04,858] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/sysmenu/QueryMenus/ HTTP/1.1" 200 31651
+[2025-03-06 13:56:37,464] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-06 13:56:44,979] [sysmenuviewset.py:61] [sysmenuviewset:QueryMenus] [INFO]- 进入方法时间:2025-03-06 13:56:44
+[2025-03-06 13:56:45,105] [sysmenuviewset.py:100] [sysmenuviewset:QueryMenus] [INFO]- 结束方法时间:2025-03-06 13:56:45
+[2025-03-06 13:56:45,113] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/sysmenu/QueryMenus/ HTTP/1.1" 200 31651
+[2025-03-06 13:56:46,019] [sysmenuviewset.py:61] [sysmenuviewset:QueryMenus] [INFO]- 进入方法时间:2025-03-06 13:56:46
+[2025-03-06 13:56:46,180] [sysmenuviewset.py:100] [sysmenuviewset:QueryMenus] [INFO]- 结束方法时间:2025-03-06 13:56:46
+[2025-03-06 13:56:46,184] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/sysmenu/QueryMenus/ HTTP/1.1" 200 31651

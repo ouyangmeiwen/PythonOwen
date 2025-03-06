@@ -67,6 +67,7 @@ class SysmenuViewSet(ModelViewSet):
         TenantId=serilizer_input.data["TenantId"]
 
 
+        # menus_query=Sysmenu.objects.using("invengodb").all()
         menus_query=Sysmenu.objects.all()
         if Code:
             menus_query=menus_query.filter(code__icontains=Code)

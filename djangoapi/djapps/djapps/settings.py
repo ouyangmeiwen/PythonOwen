@@ -90,14 +90,14 @@ DATABASES = {
         'HOST': '192.168.229.130',
         'PORT': '3306',
     },
-    # 'invengodb': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'invengodbv41',
-    #     'USER': 'root',
-    #     'PASSWORD': 'abc@123',
-    #     'HOST': '192.168.229.130',
-    #     'PORT': '3306',
-    # }
+    'invengodb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'invengodbv41',
+        'USER': 'root',
+        'PASSWORD': 'abc@123',
+        'HOST': '192.168.229.130',
+        'PORT': '3306',
+    }
     # 'default': {
     #     'ENGINE': 'django.db.backends.oracle',
     #     'NAME': 'DCLHR',  # Oracle 数据库的服务名或 SID
