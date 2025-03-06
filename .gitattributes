@@ -1,2 +1,9 @@
+# 强制 GitHub 识别 Python 代码
 *.py linguist-detectable=true
+
+# 忽略 HTML 和 TeX 影响语言统计
+*.html linguist-vendored
+*.htm linguist-vendored
+*.tex linguist-vendored
+docs/* linguist-vendored
 build/* linguist-vendored
