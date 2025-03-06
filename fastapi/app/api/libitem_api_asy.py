@@ -32,8 +32,8 @@ async def query(request: Request,
 
 
 # GET 请求示例 /libitem_asy/list?query_many=1111
-@router_libitem_asy.get("/libitem_asy/querymany", tags=["libitem_asy"])
-async def querymany(request: Request,
+@router_libitem_asy.get("/libitem_asy/query_many", tags=["libitem_asy"])
+async def query_many(request: Request,
                     barcode: str = None,  # 非空校验 允许空值
                     title: str = None,    # 非空校验 允许空值
                     callno: str = None,   # 非空校验 允许空值
@@ -54,8 +54,8 @@ async def querymany(request: Request,
 
 
 # GET 请求示例 /libitem_asy/list?page=1&page_size=10&title=abc
-@router_libitem_asy.get("/libitem_asy/getall", tags=["libitem_asy"])
-async def getall(request: Request,
+@router_libitem_asy.get("/libitem_asy/query_bypage", tags=["libitem_asy"])
+async def query_bypage(request: Request,
                  page: int = 1,
                  page_size: int = 10,
                  title: str = None,
@@ -65,7 +65,7 @@ async def getall(request: Request,
     **GET** 请求，批量获取数据
     """
     try:
-        db_list, total = await libitemservice.getall(page=page, page_size=page_size, title=title, barcode=barcode)
+        db_list, total = await libitemservice.query_bypage(page=page, page_size=page_size, title=title, barcode=barcode)
         return Result.success_result(data={"total": total, "items": db_list}, message="list success")
     except Exception as e:
         # 返回异常的详细信息

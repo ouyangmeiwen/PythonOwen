@@ -35,11 +35,11 @@ class LibitemServiceAsy:
         if callno and len(callno) > 0:
             dynamic_kwargs["CallNo"] = callno
 
-        db_models = await self.DB.list_many(LibItem, *filters, **dynamic_kwargs)
+        db_models = await self.DB.where_many(LibItem, *filters, **dynamic_kwargs)
         dtos = [LibitenmMap.model_to_dto(db_model) for db_model in db_models]
         return dtos
 
-    async def getall(self, page: int, page_size: int, title: str, barcode: str) -> Tuple[List[LibitemDto], int]:
+    async def query_bypage(self, page: int, page_size: int, title: str, barcode: str) -> Tuple[List[LibitemDto], int]:
         filters = []
         if title and len(title) > 0:
             filters.append(LibItem.Title.like(f"%{title}%"))
@@ -48,7 +48,7 @@ class LibitemServiceAsy:
         if barcode and len(barcode) > 0:
             dynamic_kwargs["Barcode"] = barcode
 
-        db_list, total = await self.DB.list_dicts_bypage(LibItem,
+        db_list, total = await self.DB.where_bypage(LibItem,
                                                           *filters,
                                                           page=page,
                                                           page_size=page_size,

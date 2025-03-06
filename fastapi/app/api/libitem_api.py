@@ -33,8 +33,8 @@ def query(request: Request,
         return Result.error_result(message=f"query failed: {str(e)}")
 
 # GET 请求示例 /libitem/list?query_many=1111
-@router_libitem.get("/libitem/querymany", tags=["libitem"])
-def querymany(request: Request,
+@router_libitem.get("/libitem/query_many", tags=["libitem"])
+def query_many(request: Request,
           barcode:str=None,  #非空校验 允许空值
           title:str=None,    #非空校验 允许空值
           callno:str=None,   #非空校验 允许空值
@@ -56,8 +56,8 @@ def querymany(request: Request,
 
 
 # GET 请求示例 /libitem/list?page=1&page_size=10&title=abc
-@router_libitem.get("/libitem/getall", tags=["libitem"])
-def getall(request: Request, 
+@router_libitem.get("/libitem/query_bypage", tags=["libitem"])
+def query_bypage(request: Request, 
          page:int=1,
          page_size:int=10, 
          title:str=None,
@@ -68,7 +68,7 @@ def getall(request: Request,
     """
     try:
         libitemservice=LibitemService()
-        db_list,total=libitemservice.getall(page=page,page_size=page_size,title=title,barcode=barcode)
+        db_list,total=libitemservice.query_bypage(page=page,page_size=page_size,title=title,barcode=barcode)
         return Result.success_result(data={"total":total,"items":db_list}, message="list success")
     except Exception as e:
         # 返回异常的详细信息

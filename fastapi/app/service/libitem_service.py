@@ -44,7 +44,7 @@ class LibitemService:
         if callno and len(callno) > 0:
             dynamic_kwargs["CallNo"] = callno
             
-        db_models=self.DB.list_many(LibItem,*filters,**dynamic_kwargs)
+        db_models=self.DB.where_many(LibItem,*filters,**dynamic_kwargs)
         dtos:List[LibitemDto]=[]
         for db_model in db_models:
             dto=LibitenmMap.model_to_dto(db_model)
@@ -52,7 +52,7 @@ class LibitemService:
         return dtos
 
 
-    def getall(self,page:int,page_size:int,title:str,barcode:str)-> Tuple[List[LibitemDto], int]:
+    def query_bypage(self,page:int,page_size:int,title:str,barcode:str)-> Tuple[List[LibitemDto], int]:
         filters = []
         if title and len(title) > 0:  # 检查 title 是否非空
             filters.append(LibItem.Title.like(f"%{title}%"))  # 添加模糊匹配过滤条件
@@ -63,7 +63,7 @@ class LibitemService:
         if barcode and len(barcode) > 0:
             dynamic_kwargs["Barcode"] = barcode  # 如果 title 不为空，加入到 kwargs 中
 
-        db_list,total=self.DB.list_dicts_bypage(LibItem,
+        db_list,total=self.DB.where_bypage(LibItem,
                                         *filters,  # 动态传递过滤条件
                                         page=page,
                                         page_size=page_size,

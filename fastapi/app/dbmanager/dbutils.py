@@ -206,12 +206,12 @@ class Database:
         """
         根据任意条件查询记录,返回单条记录。
         """
-        result_lst= self.list_many(model,*filters,**kwargs)
+        result_lst= self.where_many(model,*filters,**kwargs)
         if result_lst and len(result_lst)>0:
             return result_lst[0]
         else:
             return None
-    def list_many(self, model: Type[T], *filters, **kwargs) -> List[T]:
+    def where_many(self, model: Type[T], *filters, **kwargs) -> List[T]:
         """
         根据任意条件查询记录，支持复杂查询。
         :param model: 要查询的模型类。
@@ -234,7 +234,7 @@ class Database:
     # for user in users:
     #     print(user)
 
-    def list_dicts_bypage(self, model: Type[T], *filters, page: int = 1, page_size: int = 10,order_by: Optional[str] = None, ascending: bool = True, **kwargs) ->  Tuple[List[T], int]:
+    def where_bypage(self, model: Type[T], *filters, page: int = 1, page_size: int = 10,order_by: Optional[str] = None, ascending: bool = True, **kwargs) ->  Tuple[List[T], int]:
         """
         根据任意条件查询记录，支持复杂查询，并加入分页功能。 {"total": total_count, "items": items}
         :param model: 要查询的模型类。
