@@ -1,4 +1,8 @@
-# 忽略 TeX 和其他非 Python 文件
+# 忽略 TeX 文件
 *.tex linguist-vendored
-* linguist-vendored
+*.bib linguist-vendored
+*.cls linguist-vendored
+*.sty linguist-vendored
+
+# 其他文件也忽略（如果不是 Python）
 !*.py
