@@ -78,7 +78,7 @@ def query_bypage(request: Request,
 
 # POST 请求示例
 @router_libitem.post("/libitem", tags=["libitem"])
-async def create(input: LibitemInput, request: Request, token: str = Depends(verify_authorization)):
+def create(input: LibitemInput, request: Request, token: str = Depends(verify_authorization)):
     """
     **POST** 请求，创建数据
     """
@@ -94,7 +94,7 @@ async def create(input: LibitemInput, request: Request, token: str = Depends(ver
 
 # PUT 请求示例 {id} 必须放第一个参数
 @router_libitem.put("/libitem/{id}", tags=["libitem"])
-async def update(id: str, 
+def update(id: str, 
                  input: LibitemInput, 
                  request: Request, 
                  token: str = Depends(verify_authorization)):
@@ -113,7 +113,7 @@ async def update(id: str,
 
 # DELETE 请求示例 {id} 必须放第一个参数
 @router_libitem.delete("/libitem/{id}", tags=["libitem"])
-async def delete(id: str, 
+def delete(id: str, 
                  request: Request, 
                  soft_delete:bool,
                  token: str = Depends(verify_authorization)):

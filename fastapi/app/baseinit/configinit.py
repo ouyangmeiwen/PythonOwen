@@ -17,8 +17,9 @@ print(f"DATABASE_URL_ASY:{DATABASE_URL_ASY}")
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
 print(f"SECRET_KEY:{SECRET_KEY}")
 
+ALGORITHM = os.getenv("ALGORITHM", "HS256")# 使用 HMAC SHA-256 算法
+print(f"ALGORITHM:{ALGORITHM}")
 
-ALGORITHM = "HS256"  # 使用 HMAC SHA-256 算法
 ENABLE_AUTH = os.getenv("ENABLE_AUTH", "False").lower() == "true"
 print(f"ENABLE_AUTH:{ENABLE_AUTH}")
 
