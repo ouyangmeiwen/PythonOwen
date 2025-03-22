@@ -4,6 +4,7 @@ from app.api.token_api import router_token
 from app.api.libitem_api import router_libitem
 from app.api.libitem_api_asy import router_libitem_asy
 from app.api.file_api import router_file
+from app.api.libItemInventoryInfo_api_asy import router_libiteminventoryinfo_asy
 
 def routerinit(app:FastAPI):
     app.include_router(router_items)  #item
@@ -11,3 +12,4 @@ def routerinit(app:FastAPI):
     app.include_router(router_libitem)  #libitem
     app.include_router(router_libitem_asy)  #libitem_asy
     app.include_router(router_file) #file
+    app.include_router(router_libiteminventoryinfo_asy) #router_libiteminventoryinfo_asy
