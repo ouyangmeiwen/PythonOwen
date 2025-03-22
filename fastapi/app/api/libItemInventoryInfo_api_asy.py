@@ -11,7 +11,7 @@ from app.utils.loggerutils import logger
 
 # 创建路由实例
 router_libiteminventoryinfo_asy = APIRouter()
-libiteminventoryiinfoservice = LibItemInventoryInfoServiceAsy()
+libiteminventoryinfoservice = LibItemInventoryInfoServiceAsy()
 
 @router_libiteminventoryinfo_asy.get("/libiteminventoryinfo_asy", tags=["libiteminventoryinfo_asy"])
 async def query(request: Request,
@@ -21,7 +21,7 @@ async def query(request: Request,
     **GET** 请求，通过id获取数据
     """
     try:
-        result = await libiteminventoryiinfoservice.query_first(id=id)
+        result = await libiteminventoryinfoservice.query_first(id=id)
         return Result.success_result(data=result, message="query success")
     except Exception as e:
         # 返回异常的详细信息
@@ -41,7 +41,7 @@ async def query_many(request: Request,
     """
     try:
         if (barcode and len(barcode) > 0) or (title and len(title) > 0) or (callno and len(callno) > 0):
-            result = await libiteminventoryiinfoservice.query_many(barcode, title, callno)
+            result = await libiteminventoryinfoservice.query_many(barcode, title, callno)
             return Result.success_result(data=result, message="query success")
         else:
             return Result.error_result(message="查询参数不能全部是空的")
@@ -63,7 +63,7 @@ async def query_bypage(request: Request,
     **GET** 请求，批量获取数据
     """
     try:
-        db_list, total = await libiteminventoryiinfoservice.query_bypage(page=page, page_size=page_size, title=title, barcode=barcode)
+        db_list, total = await libiteminventoryinfoservice.query_bypage(page=page, page_size=page_size, title=title, barcode=barcode)
         return Result.success_result(data={"total": total, "items": db_list}, message="list success")
     except Exception as e:
         # 返回异常的详细信息
@@ -78,7 +78,7 @@ async def create(input: LibItemInventoryInfoInput, request: Request, token: str 
     **POST** 请求，创建数据
     """
     try:
-        await libiteminventoryiinfoservice.create(input)
+        await libiteminventoryinfoservice.create(input)
         return Result.success_result(message="create success")
     except Exception as e:
         # 返回异常的详细信息
@@ -96,7 +96,7 @@ async def update(id: str,
     **PUT** 请求，更新数据
     """
     try:
-        await libiteminventoryiinfoservice.update(id=id, input=input)
+        await libiteminventoryinfoservice.update(id=id, input=input)
         return Result.success_result(message="update success")
     except Exception as e:
         # 返回异常的详细信息
@@ -113,7 +113,7 @@ async def delete(id: str,
     **DELETE** 请求，删除数据
     """
     try:
-        await libiteminventoryiinfoservice.delete(id=id)
+        await libiteminventoryinfoservice.delete(id=id)
         return Result.success_result(message="delete success")
     except Exception as e:
         # 返回异常的详细信息
