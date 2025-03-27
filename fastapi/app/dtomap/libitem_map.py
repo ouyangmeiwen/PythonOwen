@@ -4,45 +4,45 @@ from app.utils.stringutils import StringUtils
 from app.dtos.libitem_input import LibitemInput
 
 class LibitemMap:
-    # @staticmethod
-    # def model_to_dto(db_model: LibItem) -> LibitemDto:
-    #     dto = LibitemDto()
-    #     for field in db_model.__dict__.keys():
-    #         if hasattr(dto, field):
-    #             value = getattr(db_model, field)
-    #             # 特殊字段转换
-    #             if field in ["IsDeleted", "IsEnable"]:
-    #                 value = StringUtils.to_bool(value)
-    #             setattr(dto, field, value)
-    #     return dto
+    @staticmethod
+    def model_to_dto_attr(db_model: LibItem) -> LibitemDto:
+        dto = LibitemDto()
+        for field in db_model.__dict__.keys():
+            if hasattr(dto, field):
+                value = getattr(db_model, field)
+                # 特殊字段转换
+                if field in ["IsDeleted", "IsEnable"]:
+                    value = StringUtils.to_bool(value)
+                setattr(dto, field, value)
+        return dto
 
-    # @staticmethod
-    # def input_to_model(input: LibitemInput) -> LibItem:
-    #     dt_model = LibItem()
-    #     for field in input.__dict__.keys():
-    #         if hasattr(dt_model, field):
-    #             value = getattr(input, field)
-    #             # 特殊字段转换
-    #             if field in ["IsDeleted", "IsEnable"]:
-    #                 value = 1 if value else 0
-    #             setattr(dt_model, field, value)
-    #     return dt_model
+    @staticmethod
+    def input_to_model_attr(input: LibitemInput) -> LibItem:
+        dt_model = LibItem()
+        for field in input.__dict__.keys():
+            if hasattr(dt_model, field):
+                value = getattr(input, field)
+                # 特殊字段转换
+                if field in ["IsDeleted", "IsEnable"]:
+                    value = 1 if value else 0
+                setattr(dt_model, field, value)
+        return dt_model
     
     
     
-    # @staticmethod
-    # def model_to_dto(db_model: LibItem) -> LibitemDto:
-    #     data = db_model.__dict__.copy()
-    #     data["IsDeleted"] = StringUtils.to_bool(data.get("IsDeleted", 0))
-    #     data["IsEnable"] = StringUtils.to_bool(data.get("IsEnable", 0))
-    #     return LibitemDto(**data)
+    @staticmethod
+    def model_to_dto_dict(db_model: LibItem) -> LibitemDto:
+        data = db_model.__dict__.copy()
+        data["IsDeleted"] = StringUtils.to_bool(data.get("IsDeleted", 0))
+        data["IsEnable"] = StringUtils.to_bool(data.get("IsEnable", 0))
+        return LibitemDto(**data)
 
-    # @staticmethod
-    # def input_to_model(input: LibitemInput) -> LibItem:
-    #     data = input.__dict__.copy()
-    #     data["IsDeleted"] = 1 if data.get("IsDeleted", False) else 0
-    #     data["IsEnable"] = 1 if data.get("IsEnable", False) else 0
-    #     return LibItem(**data)
+    @staticmethod
+    def input_to_model_dict(input: LibitemInput) -> LibItem:
+        data = input.__dict__.copy()
+        data["IsDeleted"] = 1 if data.get("IsDeleted", False) else 0
+        data["IsEnable"] = 1 if data.get("IsEnable", False) else 0
+        return LibItem(**data)
 
 
     @staticmethod
