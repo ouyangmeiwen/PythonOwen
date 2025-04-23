@@ -5,6 +5,7 @@ from sqlalchemy.dialects.mysql import TINYINT
 from app.dbmodel.base_model import Base  # 假设 Base 已在 base_model 定义
 
 class LibItemInventoryInfo(Base):
+    """ SQLAlchemy 模型 """
     __tablename__ = 'LibItemInventoryInfo'
 
     Id = Column(String(32), primary_key=True, index=True, nullable=False)

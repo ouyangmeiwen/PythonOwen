@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from typing import Optional
 
 class LibitemInput(BaseModel):
+    """ Pydantic DTO（Data Transfer Object） """
     Id: str
     CreationTime: Optional[str]
     CreatorUserId: Optional[int]

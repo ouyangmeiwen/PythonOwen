@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from typing import Optional
 
 class LibItemInventoryInfoDto(BaseModel):
+    """ Pydantic DTO（Data Transfer Object） """
     Id: str
     CreationTime: Optional[str] = None
     CreatorUserId: Optional[int] = None

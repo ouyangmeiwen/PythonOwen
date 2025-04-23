@@ -3,6 +3,7 @@ from typing import Optional
 from pydantic import BaseModel
 
 class LibitemDto(BaseModel):  #带有默认值的
+    """ Pydantic DTO（Data Transfer Object） """
     Id: str = ""
     CreationTime: Optional[str] = None
     CreatorUserId: Optional[int] = None

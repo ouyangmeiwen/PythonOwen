@@ -4,8 +4,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.dialects.mysql import TINYINT
 # 假设 Base 在 base.basemodel 中已经定义
 from app.dbmodel.base_model import Base
-
 class LibItem(Base):
+    """ SQLAlchemy 模型 """
     __tablename__ = 'LibItem'
 
     # 字段定义
