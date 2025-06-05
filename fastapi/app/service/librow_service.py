@@ -13,7 +13,7 @@ from app.dbmanager.dbinstance import DB_INSTANCE_ASY
 from app.dtomap.librow_map import LibRowMap
 from app.dtomap.libshelf_map import LibShelfMap
 from app.dtomap.liblayer_map import LibLayerMap
-
+from collections import defaultdict
 
 
 class LibRowServiceAsync:
@@ -52,10 +52,13 @@ class LibRowServiceAsync:
         # liblayer_models.sort(key=lambda s: s.ShelfNo, reverse=True)
 
         # 构建 row_id -> shelves 映射
-        shelves_map = {}
+        # shelves_map = {}
+        # for shelf in libshelf_models:
+        #     shelves_map.setdefault(shelf.RowIdentity, []).append(shelf)
+        
+        shelves_map = defaultdict(list)
         for shelf in libshelf_models:
-            shelves_map.setdefault(shelf.RowIdentity, []).append(shelf)
-
+            shelves_map[shelf.RowIdentity].append(shelf)
 
 
          # 提取 RowIdentity 列表
@@ -71,10 +74,14 @@ class LibRowServiceAsync:
         liblayer_models.sort(key=lambda s: s.Code) # 本地按 ShelfNo 升序排序
         
         # 构建 shelf_id -> layers 映射
-        layer_map = {}
+        # layer_map = {}
+        # for layer in liblayer_models:
+        #     layer_map.setdefault(layer.ShelfId, []).append(layer)
+        layer_map = defaultdict(list)
         for layer in liblayer_models:
-            layer_map.setdefault(layer.ShelfId, []).append(layer)
-        
+            layer_map[layer.ShelfId].append(layer)
+
+
         # 组装 DTO
         dtos = []
         for row_model in librow_models:
