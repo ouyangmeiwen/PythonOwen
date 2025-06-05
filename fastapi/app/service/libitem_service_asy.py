@@ -6,7 +6,7 @@ from typing import Type, TypeVar, List, Optional, Any, Tuple
 from app.utils.stringutils import StringUtils
 from app.utils.timeutils import TimeUtils
 from app.dbmanager.dbinstance import DB_INSTANCE_ASY
-from app.dtomap.libitem_map import LibitenmMap
+from app.dtomap.libitem_map import LibitemMap
 
 class LibitemServiceAsy:
     def __init__(self):
@@ -21,7 +21,7 @@ class LibitemServiceAsy:
         dynamic_kwargs = {"Id": id, "IsDeleted": 0}
         db_model = await self.DB.first_or_default(LibItem, **dynamic_kwargs)
         if db_model:
-            return  LibitenmMap.model_to_dto(db_model)
+            return  LibitemMap.model_to_dto(db_model)
         return None
 
     async def query_many(self, barcode: str, title: str, callno: str) -> List[LibitemDto]:
@@ -36,7 +36,7 @@ class LibitemServiceAsy:
             dynamic_kwargs["CallNo"] = callno
 
         db_models = await self.DB.where_many(LibItem, *filters, **dynamic_kwargs)
-        dtos = [LibitenmMap.model_to_dto(db_model) for db_model in db_models]
+        dtos = [LibitemMap.model_to_dto(db_model) for db_model in db_models]
         return dtos
 
     async def query_bypage(self, page: int, page_size: int, title: str, barcode: str) -> Tuple[List[LibitemDto], int]:
@@ -55,7 +55,7 @@ class LibitemServiceAsy:
                                                           order_by="CreationTime",
                                                           ascending=True,
                                                           **dynamic_kwargs)
-        dtos = [LibitenmMap.model_to_dto(item) for item in db_list] if db_list else []
+        dtos = [LibitemMap.model_to_dto(item) for item in db_list] if db_list else []
         return dtos, total
 
     async def update(self, id: str, input: LibitemInput):
@@ -78,7 +78,7 @@ class LibitemServiceAsy:
         input.CreationTime = TimeUtils.get_current_time()
         input.CreatorUserId = 1
         input.IsEnable = True
-        obj = LibitenmMap.input_to_model(input)
+        obj = LibitemMap.input_to_model(input)
         await self.DB.add(obj)
 
     async def delete(self, id: str, soft_delete: bool):

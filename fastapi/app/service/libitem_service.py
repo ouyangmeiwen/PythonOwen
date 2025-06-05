@@ -7,7 +7,7 @@ from app.utils.stringutils import StringUtils
 from typing import Type, TypeVar, List, Optional,Any ,Tuple
 from app.utils.timeutils import TimeUtils
 from app.dbmanager.dbinstance import DB_INSTANCE
-from app.dtomap.libitem_map import LibitenmMap
+from app.dtomap.libitem_map import LibitemMap
 class LibitemService:
     def __init__(self):
         self.DB=DB_INSTANCE
@@ -27,7 +27,7 @@ class LibitemService:
 
         db_model=self.DB.first_or_default(LibItem,**dynamic_kwargs)
         if db_model:
-            return LibitenmMap.model_to_dto(db_model)
+            return LibitemMap.model_to_dto(db_model)
         else:
             return None
     
@@ -47,7 +47,7 @@ class LibitemService:
         db_models=self.DB.where_many(LibItem,*filters,**dynamic_kwargs)
         dtos:List[LibitemDto]=[]
         for db_model in db_models:
-            dto=LibitenmMap.model_to_dto(db_model)
+            dto=LibitemMap.model_to_dto(db_model)
             dtos.append(dto)
         return dtos
 
@@ -73,7 +73,7 @@ class LibitemService:
         if db_list:
             dtos:List[LibitemDto]=[]
             for item in db_list:
-                dto=LibitenmMap.model_to_dto(item)
+                dto=LibitemMap.model_to_dto(item)
                 dtos.append(dto)
             return dtos,total
         else:
@@ -107,7 +107,7 @@ class LibitemService:
         input.CreationTime=TimeUtils.get_current_time()
         input.CreatorUserId=1
         input.IsEnable=True
-        obj=LibitenmMap.input_to_model(input)
+        obj=LibitemMap.input_to_model(input)
         self.DB.add(obj)
 
 

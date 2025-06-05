@@ -1,12 +1,14 @@
-from app.dbmodel.libitem_model import LibItem
-from app.dtos.libitem_dto import LibitemDto
+from app.dbmodel.librow_model import LibRow
+from app.dtos.librow_dto import LibRowDto
 from app.utils.stringutils import StringUtils
-from app.dtos.libitem_input import LibitemInput
+from app.dtos.librow_input import LibRowInput
 
-class LibitemMap:
+class LibRowMap:
+    
+
     @staticmethod
-    def model_to_dto(db_model: LibItem) -> LibitemDto:
-        dto = LibitemDto()
+    def model_to_dto(db_model: LibRow) -> LibRowDto:
+        dto = LibRowDto()
         for field in db_model.__dict__.keys():
             if hasattr(dto, field):
                 value = getattr(db_model, field)
@@ -16,9 +18,10 @@ class LibitemMap:
                 setattr(dto, field, value)
         return dto
 
+  
     @staticmethod
-    def input_to_model(input: LibitemInput) -> LibItem:
-        dt_model = LibItem()
+    def input_to_model(input: LibRowInput) -> LibRow:
+        dt_model = LibRow()
         for field in input.__dict__.keys():
             if hasattr(dt_model, field):
                 value = getattr(input, field)

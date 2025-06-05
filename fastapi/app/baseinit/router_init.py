@@ -5,6 +5,8 @@ from app.api.libitem_api import router_libitem
 from app.api.libitem_api_asy import router_libitem_asy
 from app.api.file_api import router_file
 from app.api.libItemInventoryInfo_api_asy import router_libiteminventoryinfo_asy
+from app.api.librow_api_asy import router_librow_asy
+
 
 def routerinit(app:FastAPI):
     app.include_router(router_items)  #item
@@ -13,3 +15,4 @@ def routerinit(app:FastAPI):
     app.include_router(router_libitem_asy)  #libitem_asy
     app.include_router(router_file) #file
     app.include_router(router_libiteminventoryinfo_asy) #router_libiteminventoryinfo_asy
+    app.include_router(router_librow_asy) #router_librow_asy
