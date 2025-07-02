@@ -4,7 +4,7 @@ from typing import Optional
 
 class LibItemInventoryInfoDto(BaseModel):
     """ Pydantic DTO（Data Transfer Object） """
-    Id: str
+    Id: str=""
     CreationTime: Optional[str] = None
     CreatorUserId: Optional[int] = None
     LastModificationTime: Optional[str] = None
@@ -13,10 +13,10 @@ class LibItemInventoryInfoDto(BaseModel):
     ItemEpc: Optional[str] = None
     LayerId: Optional[str] = None
     Antenna: Optional[str] = None
-    InventoryState: int
+    InventoryState: int=0
     ItemBarcode: Optional[str] = None
     Remark: Optional[str] = None
-    TenantId: int
+    TenantId: int=0
     LayerCode: Optional[str] = None
     ExceptionMsg: Optional[str] = None
     OCRItemAuthor: Optional[str] = None

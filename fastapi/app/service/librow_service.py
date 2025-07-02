@@ -1,5 +1,4 @@
 
-from app.dbmanager.dbutils import Database
 from app.dbmodel.dbmodels import Librow as LibRow,Libshelf as LibShelf, Liblayer as LibLayer
 
 from app.dtos.librow_dto import LibRowDto

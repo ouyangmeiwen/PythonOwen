@@ -1,4 +1,3 @@
-from app.dbmanager.dbutils import Database
 from app.dbmodel.dbmodels import Libitem as LibItem
 from app.dtos.libitem_dto import LibitemDto
 from app.dtos.libitem_input import LibitemInput
