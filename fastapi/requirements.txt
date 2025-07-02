@@ -9,3 +9,5 @@ slowapi
 pytz
 colorama
 python-multipart
+sqlacodegen
+sqlmodel

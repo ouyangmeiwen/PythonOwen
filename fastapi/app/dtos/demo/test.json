@@ -1,0 +1,35 @@
+{
+  "int_field": 42,
+  "float_field": 3.14,
+  "bool_field": true,
+  "str_field": "Hello",
+  "positive_int": 10,
+  "bounded_float": 0.75,
+  "short_str": "abc",
+  "date_field": "2025-07-02",
+  "datetime_field": "2025-07-02T15:30:00",
+  "time_field": "15:30:00",
+  "timedelta_field": "1 day, 2:30:00",
+  "decimal_field": "123456.789",
+  "uuid_field": "550e8400-e29b-41d4-a716-446655440000",
+  "path_field": "/usr/local/bin",
+  "url_field": "https://example.com",
+  "email_field": "user@example.com",
+  "ip_field": "192.168.0.1",
+  "list_field": [1, 2, 3],
+  "dict_field": {"a": 1.1, "b": 2.2},
+  "tuple_field": [1, "tuple", 3.0],
+  "set_field": ["apple", "banana"],
+  "optional_str": "optional value",
+  "union_field": "123",
+  "status": "active",
+  "sub_item": {
+    "key": "sub-key",
+    "value": 100
+  },
+  "sub_items": [
+    {"key": "item1", "value": 1},
+    {"key": "item2", "value": 2}
+  ],
+  "default_enabled": true
+}
