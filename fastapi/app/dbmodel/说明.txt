@@ -1,0 +1,14 @@
+
+
+自动生成SQLAlchemy 模型类。
+
+pip install sqlacodegen
+pip install sqlmodel
+
+sqlacodegen postgresql://user:password@localhost/dbname
+sqlacodegen mysql+pymysql://user:password@localhost/dbname
+sqlacodegen sqlite:///./example.db
+sqlacodegen mssql+pyodbc://user:password@dsn
+
+sqlacodegen mysql+pymysql://root:abc%40123@192.168.229.130:3306/invengodbv4 >/home/owen/Github/PythonOwen/fastapi/app/dbmodel/dbmodels.py
+
