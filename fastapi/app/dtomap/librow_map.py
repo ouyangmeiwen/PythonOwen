@@ -1,11 +1,11 @@
-from app.dbmodel.librow_model import LibRow
+
+from app.dbmodel.dbmodels import Librow as LibRow,Libshelf as LibShelf, Liblayer as LibLayer
 from app.dtos.librow_dto import LibRowDto
 from app.utils.stringutils import StringUtils
 from app.dtos.librow_input import LibRowInput
 from app.utils.objetcmapper import ObjectMapper
 
 class LibRowMap:
-    
 
     @staticmethod
     def model_to_dto(model: LibRow) -> LibRowDto:

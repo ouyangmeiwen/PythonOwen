@@ -2,7 +2,7 @@
 
 import json
 from typing import Type
-from app.dbmodel.libItemInventoryInfo_modle import LibItemInventoryInfo
+from app.dbmodel.dbmodels import  Libiteminventoryinfo  as LibItemInventoryInfo
 from app.dtos.libItemInventoryInfo_dto import LibItemInventoryInfoDto
 from app.dtos.libItemInventoryInfo_Input import LibItemInventoryInfoInput
 from app.utils.objetcmapper import ObjectMapper

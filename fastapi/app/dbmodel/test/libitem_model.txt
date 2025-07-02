@@ -2,8 +2,8 @@ import json
 from sqlalchemy import Column, Integer, String, Unicode, BigInteger, SmallInteger, DateTime, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.dialects.mysql import TINYINT
-# 假设 Base 在 base.basemodel 中已经定义
-from app.dbmodel.base_model import Base
+# 定义 ORM 基类
+Base = declarative_base()
 class LibItem(Base):
     """ SQLAlchemy 模型 """
     __tablename__ = 'LibItem'

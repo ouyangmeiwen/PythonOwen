@@ -1,5 +1,5 @@
 from app.dbmanager.dbutils import Database
-from app.dbmodel.libitem_model import LibItem
+from app.dbmodel.dbmodels import Libitem as LibItem
 from app.dtos.libitem_dto import LibitemDto
 from app.dtos.libitem_input import LibitemInput
 from typing import Type, TypeVar, List, Optional,Any
@@ -11,7 +11,6 @@ from app.dtomap.libitem_map import LibitemMap
 class LibitemService:
     def __init__(self):
         self.DB=DB_INSTANCE
-        self.DB.create_tables([LibItem])
 
     def initialize(self):
         self.DB.create_tables([LibItem])

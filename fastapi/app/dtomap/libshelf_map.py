@@ -1,4 +1,4 @@
-from app.dbmodel.libshelf_model import LibShelf
+from app.dbmodel.dbmodels import Librow as LibRow,Libshelf as LibShelf, Liblayer as LibLayer
 from app.dtos.libshelf_dto import LibShelfDto
 from app.utils.stringutils import StringUtils
 from app.dtos.libshelf_input import LibShelfInput
