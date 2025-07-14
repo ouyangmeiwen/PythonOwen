@@ -8,3 +8,26 @@ To install, run: pip install email-validator
 2025-02-05 07:00:17,492 - fast_api - INFO - 0c09e64a3ee747a189fad77b1385f0e7 Response: 200, Time: 0.099s
 2025-02-05 07:00:27,639 - fast_api - INFO - a2718f668612402e96ae826e659ae81e Request: GET http://127.0.0.1:7001/libitem_asy/querymany?title=%E4%B8%AD%E5%9B%BD%E4%BA%BA
 2025-02-05 07:00:27,971 - fast_api - INFO - a2718f668612402e96ae826e659ae81e Response: 200, Time: 0.330s
+2025-07-14 09:10:15,784 - fast_api - INFO - http://127.0.0.1:9002/docs
+2025-07-14 09:10:15,786 - fast_api - INFO - http://127.0.0.1:9002/docs
+2025-07-14 09:10:15,799 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-07-14 09:10:23,976 - fast_api - INFO - ba4d1f6d5550496d9569527b2c7dd629 Request: GET http://127.0.0.1:9002/docs
+2025-07-14 09:10:23,984 - fast_api - INFO - ba4d1f6d5550496d9569527b2c7dd629 Response: 200, Time: 0.007s
+2025-07-14 09:10:24,847 - fast_api - INFO - 35b1520be62d4ac5aa2fcaec7bfb4688 Request: GET http://127.0.0.1:9002/openapi.json
+2025-07-14 09:10:25,074 - fast_api - INFO - 35b1520be62d4ac5aa2fcaec7bfb4688 Response: 200, Time: 0.226s
+2025-07-14 09:12:24,630 - fast_api - INFO - http://127.0.0.1:9002/docs
+2025-07-14 09:12:24,635 - fast_api - INFO - http://127.0.0.1:9002/docs
+2025-07-14 09:12:24,648 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-07-14 09:12:50,382 - fast_api - INFO - http://127.0.0.1:9002/docs
+2025-07-14 09:12:50,383 - fast_api - INFO - http://127.0.0.1:9002/docs
+2025-07-14 09:12:50,394 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-07-14 09:12:54,523 - fast_api - INFO - 438d5838958c421bad92985e075d9d8a Request: GET http://127.0.0.1:9002/docs
+2025-07-14 09:12:54,539 - fast_api - INFO - 438d5838958c421bad92985e075d9d8a Response: 200, Time: 0.016s
+2025-07-14 09:12:55,231 - fast_api - INFO - 4afdc1524c90487abe65ed5143bb5e64 Request: GET http://127.0.0.1:9002/openapi.json
+2025-07-14 09:12:55,510 - fast_api - INFO - 4afdc1524c90487abe65ed5143bb5e64 Response: 200, Time: 0.279s
+2025-07-14 09:13:03,050 - fast_api - INFO - c175bdb98989453998de3acf92a48399 Request: GET http://127.0.0.1:9002/libiteminventoryinfo_asy/query_many
+2025-07-14 09:13:03,073 - fast_api - INFO - c175bdb98989453998de3acf92a48399 Response: 200, Time: 0.022s
+2025-07-14 09:13:08,350 - fast_api - INFO - 29adfa07225d4a12a3c0f1fce0e9069d Request: GET http://127.0.0.1:9002/libiteminventoryinfo_asy/query_many?title=%E6%88%91%E7%9A%84
+2025-07-14 09:13:09,841 - fast_api - INFO - 29adfa07225d4a12a3c0f1fce0e9069d Response: 200, Time: 1.490s
+2025-07-14 09:13:28,367 - fast_api - INFO - a8465cbdbd9142a5a5a0eb2da700b74f Request: GET http://127.0.0.1:9002/libiteminventoryinfo_asy/query_bypage?page=1&page_size=10&title=%E6%88%91%E7%9A%84
+2025-07-14 09:13:28,472 - fast_api - INFO - a8465cbdbd9142a5a5a0eb2da700b74f Response: 200, Time: 0.105s

@@ -1,0 +1,7 @@
+/fastapi/app/baseinit/__pycache__
+*.pyc
+*.pyc
+*.pyc
+/fastapi/app/service/__pycache__
+/fastapi/app/middleware/__pycache__
+/fastapi/app/dtos/__pycache__
