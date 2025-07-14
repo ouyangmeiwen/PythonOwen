@@ -1,0 +1,10 @@
+[2025-07-14 21:09:04,445] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-07-14 21:09:07,985] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-07-14 21:09:08,157] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[2025-07-14 21:09:08,161] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[2025-07-14 21:09:08,179] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[2025-07-14 21:09:08,187] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[2025-07-14 21:09:08,205] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[2025-07-14 21:09:08,212] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[2025-07-14 21:09:08,221] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+[2025-07-14 21:09:08,614] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 22499

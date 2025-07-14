@@ -1,0 +1,16 @@
+[2025-02-05 10:43:34,074] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-02-05 10:43:48,815] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-02-05 10:43:48,883] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[2025-02-05 10:43:48,888] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[2025-02-05 10:43:48,918] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[2025-02-05 10:43:48,930] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[2025-02-05 10:43:49,020] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[2025-02-05 10:43:49,029] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[2025-02-05 10:43:49,030] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+[2025-02-05 10:43:49,401] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 22505
+[2025-02-05 10:44:36,594] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-02-05 10:44:51,819] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-02-05 10:44:52,253] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 22505
+[2025-02-05 10:45:06,109] [libitemviewset.py:263] [libitemviewset:GetItemList] [INFO]- 进入方法时间:2025-02-05 10:45:06
+[2025-02-05 10:45:06,703] [libitemviewset.py:318] [libitemviewset:GetItemList] [INFO]- 结束方法时间:2025-02-05 10:45:06
+[2025-02-05 10:45:06,707] [basehttp.py:212] [basehttp:log_message] [INFO]- "POST /api/gpi/Libitem/GetItemList/ HTTP/1.1" 200 73163

@@ -1,0 +1,17 @@
+[2025-03-04 08:22:00,576] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:22:04,119] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:22:04,229] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[2025-03-04 08:22:04,246] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[2025-03-04 08:22:04,253] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[2025-03-04 08:22:04,280] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+[2025-03-04 08:22:04,301] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[2025-03-04 08:22:04,309] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[2025-03-04 08:22:04,334] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[2025-03-04 08:22:04,689] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 22505
+[2025-03-04 08:26:43,406] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:26:47,083] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:26:47,516] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 22499
+[2025-03-04 08:38:11,671] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-03-04 08:38:13,752] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2175
+[2025-03-04 08:38:14,067] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/?format=openapi HTTP/1.1" 200 22499
+[2025-03-04 08:38:15,871] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /django/admin/login/?next=/api/swagger/ HTTP/1.1" 200 4221

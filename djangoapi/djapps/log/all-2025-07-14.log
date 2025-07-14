@@ -1,0 +1,114 @@
+[2025-07-14 21:07:45,756] [autoreload.py:668] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2025-07-14 21:08:01,092] [log.py:241] [log:log_response] [WARNING]- Not Found: /
+[2025-07-14 21:08:01,098] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 179
+[2025-07-14 21:08:01,432] [log.py:241] [log:log_response] [WARNING]- Not Found: /favicon.ico
+[2025-07-14 21:08:01,446] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 179
+[2025-07-14 21:08:05,312] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2168
+[2025-07-14 21:08:05,405] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-07-14 21:08:05,412] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-07-14 21:08:05,416] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-07-14 21:08:05,419] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-07-14 21:08:05,427] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-07-14 21:08:05,429] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-07-14 21:08:05,442] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-07-14 21:08:05,451] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:05,489] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-07-14 21:08:05,472] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-07-14 21:08:05,495] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:05,493] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-07-14 21:08:05,497] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-07-14 21:08:05,501] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-07-14 21:08:05,579] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+[2025-07-14 21:08:05,584] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 179
+[2025-07-14 21:08:06,943] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /admin/login/?next=/api/swagger/ HTTP/1.1" 200 4207
+[2025-07-14 21:08:06,974] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/js/theme.js
+[2025-07-14 21:08:06,986] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/js/theme.js HTTP/1.1" 404 179
+[2025-07-14 21:08:06,976] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/base.css
+[2025-07-14 21:08:06,988] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2025-07-14 21:08:06,984] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/login.css
+[2025-07-14 21:08:06,989] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[2025-07-14 21:08:06,979] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/nav_sidebar.css
+[2025-07-14 21:08:06,986] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/dark_mode.css
+[2025-07-14 21:08:06,981] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/responsive.css
+[2025-07-14 21:08:06,997] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2025-07-14 21:08:06,996] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2025-07-14 21:08:06,995] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/js/nav_sidebar.js
+[2025-07-14 21:08:06,998] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2025-07-14 21:08:06,999] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2025-07-14 21:08:11,938] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2168
+[2025-07-14 21:08:12,131] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-07-14 21:08:12,135] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-07-14 21:08:12,138] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-07-14 21:08:12,143] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-07-14 21:08:12,155] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-07-14 21:08:12,158] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-07-14 21:08:12,169] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-07-14 21:08:12,173] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-07-14 21:08:12,179] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-07-14 21:08:12,180] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:12,186] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-07-14 21:08:12,188] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:12,193] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-07-14 21:08:12,195] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-07-14 21:08:16,477] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /admin/login/?next=/api/swagger/ HTTP/1.1" 200 4207
+[2025-07-14 21:08:16,515] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/nav_sidebar.css
+[2025-07-14 21:08:16,520] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/dark_mode.css
+[2025-07-14 21:08:16,525] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/responsive.css
+[2025-07-14 21:08:16,528] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/base.css
+[2025-07-14 21:08:16,542] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2025-07-14 21:08:16,537] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/js/theme.js
+[2025-07-14 21:08:16,538] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2025-07-14 21:08:16,544] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/js/theme.js HTTP/1.1" 404 179
+[2025-07-14 21:08:16,542] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2025-07-14 21:08:16,533] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/css/login.css
+[2025-07-14 21:08:16,541] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2025-07-14 21:08:16,547] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[2025-07-14 21:08:16,587] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/admin/js/nav_sidebar.js
+[2025-07-14 21:08:16,595] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2025-07-14 21:08:24,257] [basehttp.py:212] [basehttp:log_message] [INFO]- "POST /admin/login/?next=/api/swagger/ HTTP/1.1" 302 0
+[2025-07-14 21:08:24,603] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2396
+[2025-07-14 21:08:24,775] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-07-14 21:08:24,778] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-07-14 21:08:24,814] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:24,787] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-07-14 21:08:24,793] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-07-14 21:08:24,807] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-07-14 21:08:24,788] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-07-14 21:08:24,818] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:24,840] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-07-14 21:08:24,819] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-07-14 21:08:24,839] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-07-14 21:08:24,827] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-07-14 21:08:24,927] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-07-14 21:08:24,927] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-07-14 21:08:28,583] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2396
+[2025-07-14 21:08:28,602] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-07-14 21:08:28,612] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-07-14 21:08:28,606] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-07-14 21:08:28,608] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-07-14 21:08:28,610] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-07-14 21:08:28,615] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-07-14 21:08:28,614] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:28,612] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-07-14 21:08:28,604] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-07-14 21:08:28,624] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-07-14 21:08:28,623] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-07-14 21:08:28,622] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-07-14 21:08:28,626] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
+[2025-07-14 21:08:28,627] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:36,485] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /admin/logout/?next=/api/swagger/ HTTP/1.1" 302 0
+[2025-07-14 21:08:36,499] [basehttp.py:212] [basehttp:log_message] [INFO]- "GET /api/swagger/ HTTP/1.1" 200 2168
+[2025-07-14 21:08:36,566] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/style.css
+[2025-07-14 21:08:36,572] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/insQ.min.js
+[2025-07-14 21:08:36,577] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+[2025-07-14 21:08:36,592] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 179
+[2025-07-14 21:08:36,588] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+[2025-07-14 21:08:36,594] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 179
+[2025-07-14 21:08:36,592] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/style.css HTTP/1.1" 404 179
+[2025-07-14 21:08:36,593] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:36,583] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/immutable.min.js
+[2025-07-14 21:08:36,591] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+[2025-07-14 21:08:36,597] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 179
+[2025-07-14 21:08:36,598] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 179
+[2025-07-14 21:08:36,617] [log.py:241] [log:log_response] [WARNING]- Not Found: /static/drf-yasg/swagger-ui-init.js
+[2025-07-14 21:08:36,617] [basehttp.py:212] [basehttp:log_message] [WARNING]- "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 179
