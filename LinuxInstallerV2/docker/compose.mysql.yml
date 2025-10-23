@@ -1,0 +1,48 @@
+name: ${DEPLOYMENT_NAME:-invengo-lmsv4}
+
+services:
+
+  mysql:
+    image: harbor.dev.invengolms.com/mysql/mysql:9.2
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      TZ: Asia/Shanghai
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
+    command: --max_connections=1000 --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    healthcheck:
+      test: [ "CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', '$$MYSQl_USER', '-p$$MYSQL_PASSWORD' ]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  lms:
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  lcp:
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  rfid:
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  migrator:
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+volumes:
+  mysql_data: {}

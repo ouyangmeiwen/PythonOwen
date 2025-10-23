@@ -1,0 +1,79 @@
+{
+  "remoteServiceBaseUrl": "http://192.168.8.73:28020",
+  "remoteSyncServiceBaseUrl": "",
+  "remoteInventoryServiceBaseUrl": "http://192.171.0.201:23030",
+  "appBaseUrl": "http://192.168.8.73:28010",
+  "DigitalHumanUrl": "/app/main/digitaHuman",
+  "tenantSetting": {
+    "9996": {
+      "visualInventoryUrl": "http://inv-locallib.flyread.local",
+      "SmartCollectionUrl": "http://192.168.0.126:28023"
+    },
+    "5340": {
+      "visualInventoryUrl": "http://tl-locallib.invengo.local",
+      "SmartCollectionUrl": "http://192.168.0.126:28022"
+    },
+    "8844": {
+      "visualInventoryUrl": "http://inv-locallib.flyread.local",
+      "SmartCollectionUrl": "http://192.168.0.126:28023"
+    }
+  },
+  "copyVersion": "4.0.0.211130",
+  "GMTenant": "",
+  "isAllOnLine": false,
+  "isInnerIPFn": true,
+  "isRichText": true,
+  "isShowGate": false,
+  "appIdOptions": [
+    {
+      "title": "远望谷云图书馆",
+      "value": "wxd778053c7461c16c"
+    }
+  ],
+  "count": {
+    "xiChun": 7021,
+    "heHua": 9002,
+    "shuangHe": 12019
+  },
+  "localeMappings": {
+    "angular": [
+      {
+        "from": "pt-BR",
+        "to": "pt"
+      },
+      {
+        "from": "zh-CN",
+        "to": "zh"
+      },
+      {
+        "from": "he-IL",
+        "to": "he"
+      },
+      {
+        "from": "es-MX",
+        "to": "es"
+      },
+      {
+        "from": "vi",
+        "to": "en"
+      }
+    ],
+    "moment": [
+      {
+        "from": "es-MX",
+        "to": "es"
+      },
+      {
+        "from": "zh-Hans",
+        "to": "zh-cn"
+      },
+      {
+        "from": "vi",
+        "to": "en-gb"
+      }
+    ]
+  },
+  "ak": "gblnORrOHfH4tVQaUxKNb5GT3D4aOWmH",
+  "weatherApi": " http://restapi.amap.com/v3",
+  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAomVxPaDrHYjkaIkxn2vVjn9L0gxGPkx+nWi9Pg89jV34vkBZ9ge1sSPLX5Nqdjoi04JTT+w6XnXeOwugdraXCcol0d5SxCXcPO8S/YmTNI+Au8xxsIUU1XNy7vjh6kZ0wmKqKp2BpUwQ1KBaJDwyr8Sk30BsP6Rg9udfOVsxhnroD5aAH4WSiFvtZa04iaDWPPGJjPCzr7O8Rmhp2ySTmNUttkk0JUg7nDZ6K8APIzv+gDowW1o3LvhwwBeSanfNdjVLXG+v1vntTqzSOZAQLUjgDJzB1zbe7hiQLaFiFoRt7sFH3CDIIF0Xs3W3W+joXkavGvy+c/hi9UYZu7Y31wIDAQAB"
+}

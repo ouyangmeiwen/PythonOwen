@@ -1,0 +1,173 @@
+name: ${DEPLOYMENT_NAME:-invengo-lmsv4}
+
+x-shared-env: &shared-env
+  ASPNETCORE_ENVIRONMENT: Production
+  Abp__RedisCache__ConnectionString: redis,password=002161
+  Abp__RedisCache__DatabaseId: 0
+  Mqtt__IsEnabled: true
+  Mqtt__DevID: LcpServer_Server001
+  Mqtt__Ip: emqx
+  Mqtt__Port: 1883
+  Mqtt__UserName: admin
+  Mqtt__Password: invengo002161
+
+services:
+  
+  redis:
+    image: harbor.dev.invengolms.com/hub/redis:5
+    ports:
+      - 29020:6379
+    restart: always
+    volumes:
+      - redis_data:/data
+    command: ["redis-server", "--requirepass 002161"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  lms-site:
+    image: harbor.dev.invengolms.com/lms/site/core:latest
+    ports:
+      - 28010:80
+    restart: always
+    volumes:
+      - ./conf/lms-site/appconfig.production.json:/usr/share/nginx/html/assets/appconfig.production.json
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 20s
+      timeout: 5s
+      retries: 2
+      start_period: 5s
+              
+  lms:
+    image: harbor.dev.invengolms.com/lms/core:${LMS_VERSION}
+    depends_on:
+      redis:
+        condition: service_healthy 
+    environment:
+      <<: *shared-env
+    ports:
+      - 28020:80
+    restart: always
+    volumes:
+      - ./conf/lms/appsettings.Production.json:/app/appsettings.Production.json
+      - ${DATA_PATH}/logs/lms:/app/App_Data/Logs
+      - activation-code-storge:/tmp/RegistryKey
+      - ${DATA_PATH}/attachments/lms:/var/attachments
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost/healthz"]
+      interval: 1m
+      timeout: 10s
+      retries: 2
+      start_period: 30s
+
+  lcp:
+    image: harbor.dev.invengolms.com/lms/lcp:${LMS_VERSION}
+    depends_on:
+      redis:
+        condition: service_healthy
+      emqx:
+        condition: service_healthy
+    restart: always
+    environment:
+      <<: *shared-env
+    ports:
+      - 24020:80
+    volumes:
+      - ./conf/lcp/appsettings.Production.json:/app/appsettings.Production.json
+      - ${DATA_PATH}/logs/lcp:/app/App_Data/Logs 
+      - activation-code-storge:/tmp/RegistryKey
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost/healthz"]
+      interval: 1m
+      timeout: 10s
+      retries: 2
+      start_period: 30s
+
+  rfid:
+    image: harbor.dev.invengolms.com/lms/rfid:${LMS_VERSION}
+    restart: always
+    depends_on:
+      redis:
+        condition: service_healthy 
+    environment:
+      <<: *shared-env
+    ports:
+      - 23030:80
+    volumes:
+      - ./conf/rfid/appsettings.Production.json:/app/appsettings.Production.json
+      - ${DATA_PATH}/logs/rfid:/app/App_Data/Logs
+      - activation-code-storge:/tmp/RegistryKey
+
+  rfid-site:
+    image: harbor.dev.invengolms.com/lms/site/rfid:latest
+    ports:
+      - "23040:80"
+    restart: always
+    volumes:
+      - ./conf/rfid-site/appconfig.production.json:/usr/share/nginx/html/assets/appconfig.production.json
+      - ./conf/rfid-site/position:/usr/share/nginx/html/assets/images/position
+      - ./conf/rfid-site/custom:/usr/share/nginx/html/assets/custom
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 20s
+      timeout: 5s
+      retries: 2
+      start_period: 5s
+    
+  gpi:
+    image: harbor.dev.invengolms.com/lms/gpi:${LMS_VERSION}
+    restart: always
+    depends_on:
+      redis:
+        condition: service_healthy
+    environment:
+      <<: *shared-env
+    ports:
+      - 25010:80
+    volumes:
+      - ./conf/gpi/appsettings.Production.json:/app/appsettings.Production.json
+      - ${DATA_PATH}/logs/gpi:/app/App_Data/Logs 
+      - activation-code-storge:/tmp/RegistryKey
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost/healthz"]
+      interval: 1m
+      timeout: 10s
+      retries: 2
+      start_period: 30s
+
+  migrator:
+    image: harbor.dev.invengolms.com/lms/migrator/${DB_PROVIDER}:${LMS_VERSION}
+    environment:
+      <<: *shared-env
+    volumes:
+      - ./conf/migrator/appsettings.Production.json:/app/appsettings.Production.json
+      - ${DATA_PATH}/logs/migrator:/app/App_Data/Logs
+    profiles:
+      - tools
+
+  emqx:
+    image: harbor.dev.invengolms.com/hub/emqx:5.7.0
+    restart: always
+    healthcheck:
+      test: ["CMD", "/opt/emqx/bin/emqx", "ctl", "status"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    ports:
+      - 1883:1883 # tcp
+      # - 8083:8083 # ssl
+      # - 8084:8084 # ws
+      # - 8883:8883 # wss
+      - 18083:18083 # dashboard
+    volumes:
+      - emqx-data:/opt/emqx/data
+      
+volumes:
+  redis_data: {}
+  activation-code-storge: {}
+  emqx-data: {}
