@@ -80,6 +80,8 @@ services:
       - ./conf/lcp/appsettings.Production.json:/app/appsettings.Production.json
       - ${DATA_PATH}/logs/lcp:/app/App_Data/Logs 
       - activation-code-storge:/tmp/RegistryKey
+      # 20250905
+      - ${DATA_PATH}/attachments/lms:/var/attachments
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost/healthz"]
       interval: 1m

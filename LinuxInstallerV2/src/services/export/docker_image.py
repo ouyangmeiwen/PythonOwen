@@ -1,6 +1,7 @@
 import itertools
 import os
 import shutil
+import subprocess
 
 from .interface import BaseExporter
 
@@ -78,5 +79,17 @@ class ImageExporter(BaseExporter):
             lms_image_names, lms_site_image_names, other_image_names
         )
 
+        # for image_name in image_names:
+        #     os.system(f"docker pull {image_name}")
         for image_name in image_names:
-            os.system(f"docker pull {image_name}")
+            # 判断镜像是否已存在
+            result = subprocess.run(
+                ["docker", "image", "inspect", image_name],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            )
+            if result.returncode == 0:
+                print(f"✅ Image already exists, skip: {image_name}")
+            else:
+                print(f"⬇️ Pulling image: {image_name}")
+                os.system(f"docker pull {image_name}")

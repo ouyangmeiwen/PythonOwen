@@ -8,7 +8,8 @@ from prompts.app import App
 from services import installer
 from sys_ctl import SysCtl
 
-
+import sys
+import traceback
 def parser_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Invengo图书馆管理系统安装程序.")
     parser.add_argument(
@@ -23,34 +24,61 @@ def parser_arguments() -> argparse.Namespace:
 
 
 def main():
-    args = parser_arguments()
+    try:
+        args = parser_arguments()
 
-    # 0: user settings
-    env, db_options = App(args.workdir).run()
+        # 0: user settings
+        env, db_options = App(args.workdir).run()
 
-    # 1: install docker, import images, deploy compose files
-    install_depends(env)
-    # 2: initialize configuration
-    configure(env, db_options)
-    # 3: start services
-    start(env, db_options)
+        # 1: install docker, import images, deploy compose files
+        install_depends(env)
+        # 2: initialize configuration
+        configure(env, db_options)
+        # 3: start services
+        start(env, db_options)
 
+    except Exception as e:
+        print(e)
+        traceback.print_exc()
+        sys.exit(1)
 
 def install_depends(env: configs.RuntimeEnvironment):
-    installer.DockerInstaller(env).install()
-    installer.DockerImageInstaller(env).install()
-    installer.DeploymentInstaller(env).install()
+    try:
+        print("正在安装Docker...")
+        installer.DockerInstaller(env).install()
+        print("Docker安装完成")
+
+        print("正在加载Docker镜像...")
+        installer.DockerImageInstaller(env).install()
+        print("Docker镜像加载完成")
+
+        print("正在部署配置文件...")
+        installer.DeploymentInstaller(env).install()
+        print("配置文件部署完成")
+    except Exception as e:
+        print(f"依赖安装过程中发生错误: {str(e)}")
+        raise
 
 
 def configure(env: configs.RuntimeEnvironment, db_options: configs.DbConnectionOptions):
-    initalizer = Initializer(env.target_dir, env.host_env, db_options)
-    initalizer.initialize()
-
+    try:
+        print("正在初始化配置...")
+        initalizer = Initializer(env.target_dir, env.host_env, db_options)
+        initalizer.initialize()
+        print("配置初始化完成")
+    except Exception as e:
+        print(f"配置初始化过程中发生错误: {str(e)}")
+        raise
 
 def start(env: configs.RuntimeEnvironment, db_options: configs.DbConnectionOptions):
-    ctl = SysCtl(env.target_dir, db_options.driver)
-    ctl.restart()
-
+    try:
+        print("正在启动服务...")
+        ctl = SysCtl(env.target_dir, db_options.driver)
+        ctl.restart()
+        print("服务启动完成")
+    except Exception as e:
+        print(f"服务启动过程中发生错误: {str(e)}")
+        raise
 
 def arguments_resolve_to_settings(args: argparse.Namespace):
     env = configs.RuntimeEnvironment(
