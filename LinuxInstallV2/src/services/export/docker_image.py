@@ -53,6 +53,15 @@ class ImageExporter(BaseExporter):
             f"{self.IMAGE_REGISTRT}/hub/{image_with_tag}"
             for image_with_tag in self.DOCKER_HUB_IMAGES
         ]
+        # 在这里添加额外的镜像 2025年11月17日09:44:03
+        extra_images = [
+            f"{self.IMAGE_REGISTRT}/nginx/nginx:1.27.4",
+            f"{self.IMAGE_REGISTRT}/dotnet/core/runtime/invengo:2.2",
+            f"{self.IMAGE_REGISTRT}/dotnet/aspnet/invengo:6.0",
+            f"mcr.microsoft.com/dotnet/runtime:6.0",
+        ]
+        other_image_names.extend(extra_images)
+
         if (
             os.system(f"docker save {str.join(' ', other_image_names)} -o depends.tar ")
             != 0
@@ -75,8 +84,17 @@ class ImageExporter(BaseExporter):
             for image_with_tag in self.DOCKER_HUB_IMAGES
         )
 
+        # 在这里添加额外的镜像 2025年11月17日09:44:12
+        extra_images = [
+            f"{self.IMAGE_REGISTRT}/nginx/nginx:1.27.4",
+            f"{self.IMAGE_REGISTRT}/dotnet/core/runtime/invengo:2.2",
+            f"{self.IMAGE_REGISTRT}/dotnet/aspnet/invengo:6.0",
+            f"mcr.microsoft.com/dotnet/runtime:6.0",
+        ]
+
         image_names = itertools.chain(
-            lms_image_names, lms_site_image_names, other_image_names
+            lms_image_names, lms_site_image_names, other_image_names,
+            extra_images,        # ✔ 直接加在这里
         )
 
         # for image_name in image_names:

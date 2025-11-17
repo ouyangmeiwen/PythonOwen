@@ -4,7 +4,7 @@ x-shared-env: &shared-env
   ASPNETCORE_ENVIRONMENT: Production
   Abp__RedisCache__ConnectionString: redis,password=002161
   Abp__RedisCache__DatabaseId: 0
-  Mqtt__IsEnabled: true
+  Mqtt__IsEnabled: false
   Mqtt__DevID: LcpServer_Server001
   Mqtt__Ip: emqx
   Mqtt__Port: 1883
@@ -49,6 +49,7 @@ services:
         condition: service_healthy 
     environment:
       <<: *shared-env
+      Mqtt__DevID: LmsServer_001 #覆盖MQTT ID
     ports:
       - 28020:80
     restart: always
@@ -74,6 +75,7 @@ services:
     restart: always
     environment:
       <<: *shared-env
+      Mqtt__DevID: LcpServer_001 #覆盖MQTT ID
     ports:
       - 24020:80
     volumes:
