@@ -111,9 +111,12 @@ class DatabaseAsy:
         await session.begin()
 
 
-        _manual_session_ctx.set(
-            session
-        )
+        token = _manual_session_ctx.set(
+        session
+    )
+
+
+        session.info["context_token"] = token
 
 
         logger.debug(
@@ -139,6 +142,7 @@ class DatabaseAsy:
 
         try:
 
+            await session.flush()
             await session.commit()
 
             logger.debug(
@@ -159,8 +163,12 @@ class DatabaseAsy:
 
             await session.close()
 
-            _manual_session_ctx.set(
-                None
+            token = session.info.get(
+        "context_token"
+    )
+            if token:
+                _manual_session_ctx.reset(
+                    token
             )
 
 
@@ -203,9 +211,17 @@ class DatabaseAsy:
 
             await session.close()
 
-            _manual_session_ctx.set(
-                None
+
+            token = session.info.get(
+                "context_token"
             )
+
+
+            if token:
+
+                _manual_session_ctx.reset(
+                    token
+                )
 
 
 
@@ -244,16 +260,13 @@ class DatabaseAsy:
 
                 try:
 
-
                     yield session
 
+                    await session.flush()
 
                     await session.commit()
 
-
-
                 except Exception:
-
 
                     await session.rollback()
 
@@ -262,7 +275,7 @@ class DatabaseAsy:
 
 
 
-    async def _get_session(
+    async def _create_session(
         self
     ) -> AsyncSession:
 
@@ -278,7 +291,12 @@ class DatabaseAsy:
 
         return self.Session()
 
-
+    async def close_session(
+        self,
+        session
+    ):
+        if session:
+            await session.close()
 
     # ===============================
     # 创建表
@@ -338,7 +356,7 @@ class DatabaseAsy:
         async with self.session_scope() as session:
 
             session.add(obj)
-
+            await session.flush()
 
 
     async def add_bulk(
@@ -471,8 +489,6 @@ class DatabaseAsy:
             stmt = delete(model).where(
                 model.id.in_(ids)
             )
-
-
             await session.execute(
                 stmt
             )
@@ -497,43 +513,39 @@ class DatabaseAsy:
 
 
     async def exists(
-        self,
-        model:Type[T],
-        *filters,
-        **kwargs
-    )->bool:
-
+    self,
+    model:Type[T],
+    *filters,
+    **kwargs
+)->bool:
 
         async with self.session_scope() as session:
 
-
-            query = select(model)
-
+            query = (
+                select(1)
+                .select_from(model)
+                .limit(1)
+            )
 
 
             for attr,value in kwargs.items():
 
                 query = query.where(
-                    getattr(model,attr) == value
+                    getattr(model,attr)==value
                 )
-
 
 
             if filters:
 
-                query = query.where(
+                query=query.where(
                     *filters
                 )
 
 
-
-            result = await session.execute(
-                query
-            )
+            result = await session.execute(query)
 
 
-            return result.scalar() is not None
-
+            return result.first() is not None
 
 
     # ===============================
@@ -687,10 +699,9 @@ class DatabaseAsy:
             )
 
 
-            return [
-                dict(row)
-                for row in result.mappings().all()
-            ]
+            return list(
+                result.mappings().all()
+            )
 
 
 
@@ -727,15 +738,10 @@ class DatabaseAsy:
         async with self.session_scope() as session:
 
 
-            result = await session.execute(
-                select(model)
-                .where(
-                    model.id == obj_id
+             return await session.get(
+                    model,
+                    obj_id
                 )
-            )
-
-
-            return result.scalar()
 
 
 
