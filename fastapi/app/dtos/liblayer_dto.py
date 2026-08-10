@@ -1,19 +1,20 @@
 import json
 from typing import Optional
 from pydantic import BaseModel
+from datetime import datetime
 
 
 class LibLayerDto(BaseModel):
     """Pydantic DTO for LibLayer（字段默认值、类型完全匹配）"""
 
     Id: str = ""
-    CreationTime: Optional[str] = None
+    CreationTime: Optional[datetime] = None
     CreatorUserId: Optional[int] = None
-    LastModificationTime: Optional[str] = None
+    LastModificationTime: Optional[datetime] = None
     LastModifierUserId: Optional[int] = None
     IsDeleted: bool = False
     DeleterUserId: Optional[int] = None
-    DeletionTime: Optional[str] = None
+    DeletionTime: Optional[datetime] = None
     ShelfId: str = ""
     Code: Optional[str] = None
     Name: str = ""

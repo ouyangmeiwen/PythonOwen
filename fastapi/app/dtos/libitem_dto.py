@@ -1,17 +1,18 @@
 import json
 from typing import Optional
 from pydantic import BaseModel
+from datetime import datetime
 
 class LibitemDto(BaseModel):  #带有默认值的
     """Pyda ntic DTO（Data Transfer Object） """
     Id: str = ""
-    CreationTime: Optional[str] = None
+    CreationTime: Optional[datetime] = None
     CreatorUserId: Optional[int] = None
-    LastModificationTime: Optional[str] = None
+    LastModificationTime: Optional[datetime] = None
     LastModifierUserId: Optional[int] = None
     IsDeleted: bool = False
     DeleterUserId: Optional[int] = None
-    DeletionTime: Optional[str] = None
+    DeletionTime: Optional[datetime] = None
     InfoId: Optional[str] = None
     Title: str = ""
     Author: Optional[str] = None

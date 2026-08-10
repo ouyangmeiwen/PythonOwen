@@ -1,13 +1,14 @@
 import json
 from pydantic import BaseModel
 from typing import Optional
+from datetime import datetime
 
 class LibItemInventoryInfoDto(BaseModel):
     """ Pydantic DTO（Data Transfer Object） """
     Id: str=""
-    CreationTime: Optional[str] = None
+    CreationTime: Optional[datetime] = None
     CreatorUserId: Optional[int] = None
-    LastModificationTime: Optional[str] = None
+    LastModificationTime: Optional[datetime] = None
     LastModifierUserId: Optional[int] = None
     ItemTid: Optional[str] = None
     ItemEpc: Optional[str] = None

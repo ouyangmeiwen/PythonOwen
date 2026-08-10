@@ -31,3 +31,53 @@ To install, run: pip install email-validator
 2025-07-14 09:13:09,841 - fast_api - INFO - 29adfa07225d4a12a3c0f1fce0e9069d Response: 200, Time: 1.490s
 2025-07-14 09:13:28,367 - fast_api - INFO - a8465cbdbd9142a5a5a0eb2da700b74f Request: GET http://127.0.0.1:9002/libiteminventoryinfo_asy/query_bypage?page=1&page_size=10&title=%E6%88%91%E7%9A%84
 2025-07-14 09:13:28,472 - fast_api - INFO - a8465cbdbd9142a5a5a0eb2da700b74f Response: 200, Time: 0.105s
+2026-08-10 18:49:20,742 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 18:49:20,744 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 18:49:20,750 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-08-10 18:49:54,453 - fast_api - INFO - 6a454865bee641d59cd59e349e92302c Request: GET http://127.0.0.1:9002/docs
+2026-08-10 18:49:54,464 - fast_api - INFO - 6a454865bee641d59cd59e349e92302c Response: 200, Time: 0.010s
+2026-08-10 18:49:54,687 - fast_api - INFO - 4192b9cc8a5543a8a4b66cda0a37b6ee Request: GET http://127.0.0.1:9002/openapi.json
+2026-08-10 18:49:54,820 - fast_api - INFO - 4192b9cc8a5543a8a4b66cda0a37b6ee Response: 200, Time: 0.133s
+2026-08-10 18:50:02,852 - fast_api - INFO - 1418dda559ee4160974d2581fcc2580f Request: GET http://127.0.0.1:9002/libitem_asy/query_many?title=%E7%9A%84
+2026-08-10 19:02:22,695 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:02:22,697 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:02:22,704 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-08-10 19:02:50,206 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:02:50,207 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:02:50,213 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-08-10 19:02:54,405 - fast_api - INFO - c4994cc81f7545f5b0864987fbde23ab Request: GET http://127.0.0.1:9002/docs
+2026-08-10 19:02:54,414 - fast_api - INFO - c4994cc81f7545f5b0864987fbde23ab Response: 200, Time: 0.008s
+2026-08-10 19:02:54,515 - fast_api - INFO - 85e30e8dc8ae43ceaa81e2a4b8d9e71a Request: GET http://127.0.0.1:9002/openapi.json
+2026-08-10 19:02:54,618 - fast_api - INFO - 85e30e8dc8ae43ceaa81e2a4b8d9e71a Response: 200, Time: 0.103s
+2026-08-10 19:03:04,433 - fast_api - INFO - 1977066653714983a688202b9cc09f15 Request: GET http://127.0.0.1:9002/libitem_asy/query_many?title=%E7%9A%84
+2026-08-10 19:03:40,380 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:03:40,382 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:03:40,388 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-08-10 19:03:41,779 - fast_api - INFO - de2554754c62479586d995514bea0fec Request: GET http://127.0.0.1:9002/docs
+2026-08-10 19:03:41,787 - fast_api - INFO - de2554754c62479586d995514bea0fec Response: 200, Time: 0.007s
+2026-08-10 19:03:41,881 - fast_api - INFO - 13747dc545cf4d0c8fb630d9a6ec6434 Request: GET http://127.0.0.1:9002/openapi.json
+2026-08-10 19:03:42,006 - fast_api - INFO - 13747dc545cf4d0c8fb630d9a6ec6434 Response: 200, Time: 0.125s
+2026-08-10 19:03:45,432 - fast_api - INFO - f0ba8999a40c4bd3a337d31694e8bd6d Request: GET http://127.0.0.1:9002/libitem_asy/query_many?title=%E7%9A%84
+2026-08-10 19:04:53,935 - fast_api - INFO - f0ba8999a40c4bd3a337d31694e8bd6d Response: 200, Time: 68.503s
+2026-08-10 19:05:54,546 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:05:54,547 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:05:54,557 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-08-10 19:06:04,309 - fast_api - INFO - 53e037f52c7c4e1f8dd31be70ffeff0f Request: GET http://127.0.0.1:9002/docs
+2026-08-10 19:06:04,320 - fast_api - INFO - 53e037f52c7c4e1f8dd31be70ffeff0f Response: 200, Time: 0.010s
+2026-08-10 19:06:04,416 - fast_api - INFO - 8c79f45fa6624e3aa656a4dd22fe0917 Request: GET http://127.0.0.1:9002/openapi.json
+2026-08-10 19:06:04,516 - fast_api - INFO - 8c79f45fa6624e3aa656a4dd22fe0917 Response: 200, Time: 0.099s
+2026-08-10 19:06:14,122 - fast_api - INFO - bd0f95711c12489abc3a995a6d7621ea Request: GET http://127.0.0.1:9002/libitem_asy/query_many?title=%E7%9A%84
+2026-08-10 19:08:28,484 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:08:28,484 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:08:28,493 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-08-10 19:08:30,087 - fast_api - INFO - 94a7558953864619a5ed37fcde16068f Request: GET http://127.0.0.1:9002/libitem_asy/query_many?title=%E7%9A%84
+2026-08-10 19:08:54,703 - fast_api - INFO - 94a7558953864619a5ed37fcde16068f Response: 200, Time: 24.611s
+2026-08-10 19:10:38,347 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:10:38,348 - fast_api - INFO - http://127.0.0.1:9002/docs
+2026-08-10 19:10:38,353 - asyncio - DEBUG - Using proactor: IocpProactor
+2026-08-10 19:10:39,609 - fast_api - INFO - 5428022f9d594cc0ab80093e8012fd2b Request: GET http://127.0.0.1:9002/docs
+2026-08-10 19:10:39,614 - fast_api - INFO - 5428022f9d594cc0ab80093e8012fd2b Response: 200, Time: 0.005s
+2026-08-10 19:10:39,716 - fast_api - INFO - dc47bcb87f3d41f69df6ca37bafec9e2 Request: GET http://127.0.0.1:9002/openapi.json
+2026-08-10 19:10:39,827 - fast_api - INFO - dc47bcb87f3d41f69df6ca37bafec9e2 Response: 200, Time: 0.112s
+2026-08-10 19:11:12,139 - fast_api - INFO - 10c50abf9f2247e49843d44353cddb06 Request: GET http://127.0.0.1:9002/libitem_asy/query_many?barcode=NUAA2017033627
+2026-08-10 19:11:14,664 - fast_api - INFO - 10c50abf9f2247e49843d44353cddb06 Response: 200, Time: 2.525s
